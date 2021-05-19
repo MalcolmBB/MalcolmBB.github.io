@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/styles/ButtonStyling.css">
         <link rel="stylesheet" href="/styles/main.css">
         <link rel="stylesheet" href="/styles/home.css">
         <link rel="stylesheet" href="/styles/loading.css">
+        <link rel="stylesheet" href="/styles/ButtonStyling.css">
         <script src="/scripts/jquery-3.6.0.min.js"></script>
         <script src="/scripts/loading.js"></script>
         <title>Malcolm Baatjies</title>
@@ -40,23 +40,46 @@
         <div id="page">
         <header>
             <div class="logo">
-                <h2 class="headerHeader">&ltMalcolm Baatjies/&gt</h2>
-                <input type="button" class="button bAbout" value="<About/>">
-                <input type="button" class="button bWork" value="<Past Work/>">
-                <input type="button" class="button bBook" value="<Contact Me!/>">
+                <a href="index.html" class="headerHeader">&ltMalcolm Baatjies/&gt</a>
+                <div class="headerButtons">
+                        <a href="index.html" class="button bAbout">&ltAbout/&gt</a>
+                        <a href="index.html" class="button bWork">&ltPast Work/&gt</a>
+                        <a href="index.html" class="button bContact">&ltContact Me!/&gt</a>
+                </div>
             </div>
         </header>
         <div class="mainBody">
                 <div class="mainContainer">
                         <div class="main AboutContainer">
                             <h1>About me</h1>
-                                <div class="about Summary">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="innerAboutContainer">
+                                <div class="about aboutMePicture">
+                                    <img src="src/images/AboutMePicture.jpg" alt="Picture of me">
                                 </div>
-                                <div class="about Picture">
-                                    <img src="" alt="Picture of me">
+                                <div class="about aboutMeSummary">
+                                    <p>Quo nam velit ullamco iis cernantur hic nisi. Eu quo export fore culpa.
+                                        Consequat a anim o fugiat imitarentur incididunt ipsum probant, irure cernantur
+                                        se sunt quid ne ex legam expetendis incurreret.E minim nescius excepteur ex
+                                        cupidatat ubi aute. E an tempor esse fugiat. Export incurreret non nulla malis,
+                                        minim an mandaremus iis cillum ad id in fugiat culpa aute, tamen a de irure
+                                        quibusdam. Irure arbitror ubi domesticarum ita quae doctrina imitarentur o culpa
+                                        deserunt graviterque, malis admodum de expetendis, probant fore eram nescius
+                                        malis et illum sempiternum vidisse sint incididunt, deserunt exquisitaque se
+                                        ingeniis ea occaecat te dolor.
+
+                                        Id de sempiternum, possumus anim et admodum arbitrantur, malis eiusmod do
+                                        coniunctione, quamquam quem laboris, id e quis tempor veniam, sed ad consectetur
+                                        ab vidisse dolor dolor non multos, et aute quibusdam voluptatibus. Ipsum
+                                        exercitation pariatur legam commodo non do amet ipsum ad singulis, se aliquip
+                                        illustriora, a incurreret e possumus. Ex labore multos esse cupidatat.Iis dolore
+                                        ad anim, qui voluptate nam deserunt do eu sint singulis in ex mandaremus de
+                                        laborum. Aliquip quid culpa laboris duis. Commodo domesticarum o deserunt si ne
+                                        quid occaecat instituendarum te aute pariatur constias si veniam mandaremus ea
+                                        sempiternum. Quid e doctrina nam sunt ut ipsum qui ingeniis, mandaremus culpa
+                                        malis pariatur fore do ex irure expetendis.</p>
+                                    <input type="button" class="button bAboutContainer" href="about.html" value="<More about me/>">
                                 </div>
-                                <input type="button" class="button bAboutContainer" href="about.html" value="<More about me/>">
+                            </div>
                         </div>
                         <div class="main PastWorkContainer">
                                 <div class="pastWork JavaProjects">
@@ -110,7 +133,7 @@
         <footer>
                 <img src="" alt="">
                 <div class="ContactContainer">
-                        <h4>Contact us!</h4>
+                        <h4>Contact me!</h4>
                         <label for="userName">Name: </label>
                         <input type="text" name="userName" placeholder="First name">
                         <label for="email">Email address:</label>

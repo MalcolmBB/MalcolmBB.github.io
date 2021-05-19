@@ -1,0 +1,38 @@
+.mainContainer{
+    width: 100%;
+    height: auto;
+    padding: 10vh 5vw;
+}
+
+.main{
+    padding: 5vh 2.5vw;
+    background: var(--light);
+}
+
+.innerAboutContainer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.aboutMeSummary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.AboutContainer > h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.aboutMePicture > img{
+    width: 25vw;
+    height: 25vw;
+    margin: 0 2rem;
+}
+
+.AboutContainer{
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+}

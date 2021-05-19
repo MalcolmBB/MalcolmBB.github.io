@@ -3,9 +3,8 @@
     width: 100%;
     height: 100vh;
     background: var(--dark);
-    animation: showPage 1s ease forwards 6s reverse;
+    animation: showPage 1.8s ease forwards 6s reverse;
     z-index: 9999;
-    scr
 }
 
 #loadingName{
@@ -23,7 +22,7 @@
 }
 
 .pageShown{
-    animation: showPage 2s ease forwards;
+    animation: showPage 2.5s ease forwards;
 }
 
 #loadingName path:nth-child(1){
