@@ -1,4 +1,8 @@
 import React from 'react';
+// import {Link} from 'react-router-dom';
+import Button from '../Button/Button';
+import './Footer.css';
+
 function Footer(){
     return (
         <footer>
@@ -12,9 +16,12 @@ function Footer(){
                         <input type="button" name="sendMessage" value="Send Message"/>
                 </div>
                 <div className="socialLinks">
-                    <a href="Home">
-                        <img src="" alt="Instagram link"/>
-                    </a>
+                    <Button
+                        type="Link"
+                        className="button bInstagram"
+                        linkTo="https://www.instagram.com/"
+                        value="Instagram Link">
+                    </Button>
                 </div>
         </footer>
     );

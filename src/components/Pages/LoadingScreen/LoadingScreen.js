@@ -1,6 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-import '../styles/loading.css';
+import './LoadingScreen.css';
 
 const pathStyle = {
     whitespace: "pre",
@@ -13,7 +13,7 @@ class LoadingScreen extends React.Component{
     componentDidMount() {
         setTimeout(() => {
             this.props.history.push('/Home')
-        }, 6500)
+        }, 7500)
     }
     render() {
         return <div id="loadingMain">

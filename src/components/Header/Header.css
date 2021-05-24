@@ -1,0 +1,24 @@
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em 2.5vw;
+    align-items: center;
+    background: var(--light);
+}
+
+.headerButtons{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}

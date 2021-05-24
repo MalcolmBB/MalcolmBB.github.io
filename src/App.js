@@ -3,17 +3,12 @@ import {BrowserRouter as Router,
         Route,
         Switch} from 'react-router-dom';
 import './App.css';
-import './styles/ButtonStyling.css';
-import './styles/home.css';
-import './styles/main.css';
-import LoadingScreen from './components/LoadingScreen'
-import Home from './components/Home'
+import LoadingScreen from './components/Pages/LoadingScreen/LoadingScreen';
+import Home from './components/Pages/Home/Home';
+import About from './components/Pages/About/About';
+import PastWork from "./components/Pages/PastWork/PastWork";
 
 class App extends Component {
-    constructor(){
-        super()
-    }
-
     render(){
         return (
             <Router>
@@ -21,6 +16,8 @@ class App extends Component {
                     <Switch>
                         <LoadingScreen path= "/" exact component={LoadingScreen}/>
                         <Route path= "/Home" exact component={Home}/>
+                        <Route path= "/About" exact component={About}/>
+                        <Route path= "/Past_Work" exact component={PastWork}/>
                     </Switch>
                 </React.Fragment>
             </Router>

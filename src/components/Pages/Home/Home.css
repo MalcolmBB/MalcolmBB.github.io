@@ -1,0 +1,17 @@
+.mainContainer{
+    width: 100%;
+    height: auto;
+    padding: 10vh 5vw;
+}
+
+.main{
+    padding: 5vh 2.5vw;
+    background: var(--light);
+}
+
+.PastWorkContainer{
+    margin-left: -5vw;
+    margin-right: -5vw;
+    padding: 5vh 5vw;
+    background: var(--light);
+}
