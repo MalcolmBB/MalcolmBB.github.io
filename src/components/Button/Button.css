@@ -1,3 +1,7 @@
+:root{
+    --iconColor: var(--light);
+}
+
 .button{
     all: unset;
     text-transform: none;
@@ -10,9 +14,14 @@
     font-size: 1.2rem;
     cursor: pointer;
     color: var(--pDark);
+    background: transparent;
     border: none;
     border-left: 5px solid var(--pDark);
     border-radius: 0;
+}
+
+:root .button{
+    --iconColor: var(--pDark);
 }
 
 .invert{
@@ -20,17 +29,38 @@
     border-left: 5px solid var(--light);
 }
 
-.button > span {
+:root .invert{
+    --iconColor: var(--light);
+}
+
+.button span {
     z-index: 3;
     transition: .5s;
 }
 
-.button:hover, .button:focus > span{
+.button *{
+    z-index: 3;
+    transition: .5s;
+}
+
+.button:hover, .button:focus > .button span{
     color: var(--light);
 }
 
-.invert:hover, .invert:focus > span{
+.button:hover, .button:focus > :root{
+    --iconColor: var(--light);
+}
+
+.button:hover, .button:focus{
+    background: transparent;
+}
+
+.invert:hover, .invert:focus > .invert span{
     color: var(--pDark);
+}
+
+.invert:hover, .invert:focus > :root{
+    --iconColor: var(--pDark);
 }
 
 .button:hover:before, .button:focus:before{

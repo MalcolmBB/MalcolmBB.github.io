@@ -3,6 +3,25 @@ import React from 'react';
 import Button from '../Button/Button';
 import './Footer.css';
 
+const socialLinks = [
+    {
+        type: "Link",
+        className: "button bInstagram",
+        linkTo: "https://www.instagram.com/",
+    },
+    {
+        type: "Link",
+        className: "button bWork",
+        linkTo: "/Past_Work",
+    }
+    ,
+    {
+        type: "Link",
+        className: "button bContact",
+        linkTo: "/Contact",
+    }
+]
+
 function Footer(){
     return (
         <footer>
@@ -20,7 +39,7 @@ function Footer(){
                         type="Link"
                         className="button bInstagram"
                         linkTo="https://www.instagram.com/"
-                        value="Instagram Link">
+                        value="">
                     </Button>
                 </div>
         </footer>
