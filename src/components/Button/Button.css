@@ -85,11 +85,11 @@
     transition: .5s;
 }
 
-.button:hover, .button:focus > .button span{
-    color: var(--light);
+.button:hover, .button:focus span{
+color: var(--light);
 }
 
-.button:hover, .button:focus > :root{
+.button:hover, .button:focus {
     --iconColor: var(--light);
 }
 
@@ -97,11 +97,11 @@
     background: transparent;
 }
 
-.invert:hover, .invert:focus > .invert span{
+.invert:hover, .invert:focus span{
     color: var(--pDark);
 }
 
-.invert:hover, .invert:focus > :root{
+.invert:hover, .invert:focus {
     --iconColor: var(--pDark);
 }
 
@@ -162,5 +162,9 @@
     margin-right: 10vw;
     cursor: pointer;
     border: none;
+    background: transparent;
+}
+
+.headerHeader:hover, .headerHeader:focus {
     background: transparent;
 }

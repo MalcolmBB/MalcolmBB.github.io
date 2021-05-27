@@ -3,7 +3,7 @@ footer{
     height: auto;
     align-self: baseline;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: var(--light);
@@ -33,13 +33,34 @@ textarea{
 }
 
 .LogoContainer:hover svg circle, .LogoContainer:focus svg circle {
-    fill: var(--light);
-}
-
-.LogoContainer:hover svg path, .LogoContainer:focus svg path {
-    fill: var(--pDark);
+    fill: var(--pLight);
 }
 
 .socialLinks{
     display: flex;
+    gap: 10vw;
+}
+
+.legalities{
+    margin-top: 3vw;
+    display: flex;
+    gap: 10vw;
+}
+
+.PrivacyPolicy{
+    text-decoration: none;
+    color: var(--pDark);
+}
+
+.PrivacyPolicy:hover, .PrivacyPolicy:focus{
+    color: var(--dark);
+}
+
+.SiteMap{
+    text-decoration: none;
+    color: var(--pDark);
+}
+
+.SiteMap:hover, .SiteMap:focus{
+    color: var(--dark);
 }
