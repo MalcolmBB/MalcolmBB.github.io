@@ -4,29 +4,40 @@ import {Button as MaterialButton} from '@material-ui/core';
 import {SocialIcon} from 'react-social-icons';
 import {StylesProvider} from '@material-ui/core/styles';
 import "./Button.css"
+import ReactDOM from "react-dom";
 
 
-function Button({type, className, linkTo, value}){
+function Button({type, className, linkTo, value, linePos}){
+    if (linePos != null){
+        className += " " + linePos;
+    }
+    else {
+        className += " leftLine";
+    }
     if (type === "Link"){
         if (value === ""){
-            return linkButtonEmpty({className, linkTo});
+            return linkButtonEmpty({className, linkTo, linePos});
         }
         else{
-            return linkButton({className, linkTo, value});
+            return linkButton({className, linkTo, value, linePos});
         }
     }
     else if (type === "Navigation"){
-        return navButton({className, linkTo, value});
+        return navButton({className, linkTo, value, linePos});
     }
 }
 
-function navButton({className, linkTo, value}){
+function navButton({className, linkTo, value, linePos}){
     return (
         <StylesProvider injectFirst>
             <MaterialButton
                 className={className}
                 onClick={() => {
-                    window.scrollTo(0,0);
+                    window.scroll({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
                 }}
                 component={Link}
                 to={linkTo}
@@ -41,7 +52,7 @@ function navButton({className, linkTo, value}){
     );
 }
 
-function linkButton({className, linkTo, value}){
+function linkButton({className, linkTo, value, linePos}){
     return (
         <StylesProvider injectFirst>
             <MaterialButton
@@ -63,7 +74,7 @@ function linkButton({className, linkTo, value}){
     );
 }
 
-function linkButtonEmpty({className, linkTo}){
+function linkButtonEmpty({className, linkTo, linePos}){
     return (
         <StylesProvider injectFirst>
             <MaterialButton
@@ -76,7 +87,7 @@ function linkButtonEmpty({className, linkTo}){
                 disableFocusRipple={true}
                 disableRipple={true}
                 >
-                <SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)"/>
+                <SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"4rem", height:"4rem", padding:0}}/>
             </MaterialButton>
         </StylesProvider>
     );

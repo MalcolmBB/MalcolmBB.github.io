@@ -10,14 +10,36 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 1vw;
+    padding: .5vw;
     font-size: 1.2rem;
     cursor: pointer;
     color: var(--pDark);
     background: transparent;
+    border-radius: 0;
+}
+
+.header.button{
+    padding: 1vw;
+}
+
+.leftLine {
     border: none;
     border-left: 5px solid var(--pDark);
-    border-radius: 0;
+}
+
+.rightLine {
+    border: none;
+    border-right: 5px solid var(--pDark);
+}
+
+.bottomLine {
+    border: none;
+    border-bottom: 5px solid var(--pDark);
+}
+
+.topLine {
+    border: none;
+    border-top: 5px solid var(--pDark);
 }
 
 :root .button{
@@ -26,8 +48,28 @@
 
 .invert{
     color: var(--light);
+}
+
+.invert.leftLine {
+    border: none;
     border-left: 5px solid var(--light);
 }
+
+.invert.rightLine {
+    border: none;
+    border-right: 5px solid var(--light);
+}
+
+.invert.bottomLine {
+    border: none;
+    border-bottom: 5px solid var(--light);
+}
+
+.invert.topLine {
+    border: none;
+    border-top: 5px solid var(--light);
+}
+
 
 :root .invert{
     --iconColor: var(--light);
@@ -63,18 +105,25 @@
     --iconColor: var(--pDark);
 }
 
-.button:hover:before, .button:focus:before{
+.leftLine.button:hover:before, .leftLine.button:focus:before, .leftLine.invert:hover:before, .leftLine.invert:focus:before{
     right:0;
 }
 
-.invert:hover:before, .invert:focus:before{
-    right:0;
+.rightLine.button:hover:before, .rightLine.button:focus:before, .rightLine.invert:hover:before, .rightLine.invert:focus:before{
+    left:0;
+}
+
+.topLine.button:hover:before, .topLine.button:focus:before, .topLine.invert:hover:before, .topLine.invert:focus:before{
+    bottom:0;
+}
+
+.bottomLine.button:hover:before, .bottomLine.button:focus:before, .bottomLine.invert:hover:before, .bottomLine.invert:focus:before{
+    top:0;
 }
 
 .button:before {
     content: "";
     position: absolute;
-    right: 100%;
     width: 100%;
     height: 100%;
     background: var(--pDark);
@@ -84,6 +133,22 @@
 
 .invert:before {
     background: var(--light);
+}
+
+.leftLine.button:before{
+    right: 100%;
+}
+
+.rightLine.button:before{
+    left: 100%;
+}
+
+.topLine.button:before{
+    bottom: 100%;
+}
+
+.bottomLine.button:before{
+    top: 100%;
 }
 
 .headerHeader{
