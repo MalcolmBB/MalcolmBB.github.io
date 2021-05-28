@@ -5,6 +5,12 @@ import './Header.css'
 const headerButtons = [
     {
         type: "Navigation",
+        className: "button bHome header",
+        linkTo: "/Home",
+        value: "Home"
+    },
+    {
+        type: "Navigation",
         className: "button bAbout header",
         linkTo: "/About",
         value: "About"
@@ -12,14 +18,14 @@ const headerButtons = [
     {
         type: "Navigation",
         className: "button bWork header",
-        linkTo: "/Past_Work",
+        linkTo: "/Past-work",
         value: "Past Work"
     }
     ,
     {
         type: "Navigation",
         className: "button bContact header",
-        linkTo: "/Contact",
+        linkTo: "/Contact-me",
         value: "Contact Me!"
     }
 ]

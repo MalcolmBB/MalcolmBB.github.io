@@ -7,6 +7,12 @@
     --primary: #ff5241;
     --dark: #000000;
     --pDark: #303030;
+
+    /* --pDark: #5f5b5a;
+    --dark: #ffffff;
+    --primary: #ff5241;
+    --light: #000000;
+    --pLight: #303030; */
     font-size: 1vw;
 }
 
@@ -25,5 +31,6 @@ body{
     font-family: 'Source Code Pro', monospace;
     font-size: 1rem;
     font-weight: bold;
+    color: var(--dark);
     background: var(--pDark);
 }

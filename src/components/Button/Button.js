@@ -4,10 +4,9 @@ import {Button as MaterialButton} from '@material-ui/core';
 import {SocialIcon} from 'react-social-icons';
 import {StylesProvider} from '@material-ui/core/styles';
 import "./Button.css"
-import ReactDOM from "react-dom";
 
 
-function Button({type, className, linkTo, value, linePos}){
+function Button({type, className, linkTo, value, linePos, onClick}){
     if (linePos != null){
         className += " " + linePos;
     }
@@ -25,6 +24,26 @@ function Button({type, className, linkTo, value, linePos}){
     else if (type === "Navigation"){
         return navButton({className, linkTo, value, linePos});
     }
+    else if (type === "Submit"){
+        return submitButton({className, value, linePos, onClick});
+    }
+}
+
+function submitButton({className, value, linePos, onClick}){
+    return (
+        <StylesProvider injectFirst>
+            <MaterialButton
+                className={className}
+                disableFocusRipple={true}
+                disableRipple={true}
+                onClick={onClick}
+                >
+                <span>
+                    &lt;{value}/&gt;
+                </span>
+            </MaterialButton>
+        </StylesProvider>
+    );
 }
 
 function navButton({className, linkTo, value, linePos}){
