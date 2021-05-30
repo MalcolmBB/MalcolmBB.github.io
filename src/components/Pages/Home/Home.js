@@ -20,7 +20,6 @@ class Home extends React.Component {
         return (
             <div>
                 <Header></Header>
-                <div className="mainBody">
                     <div className="mainContainer">
                             <WorkContainer
                                 type = "mainAbout"
@@ -67,7 +66,6 @@ class Home extends React.Component {
                                     ))}
                             </div>
                     </div>
-                </div>
                 <Footer></Footer>
             </div>
         );

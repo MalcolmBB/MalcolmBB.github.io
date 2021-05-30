@@ -57,6 +57,7 @@ function navButton({className, linkTo, value, linePos}){
                         left: 0,
                         behavior: 'smooth'
                     });
+                    document.activeElement.blur();
                 }}
                 component={Link}
                 to={linkTo}

@@ -1,0 +1,20 @@
+.aboutContentExterior{
+    background: var(--light);
+    margin: 10vw 5vw;
+    padding: 2vw;
+}
+
+.aboutContentExterior h2{
+    font-size: 2rem;
+    margin-bottom: 2vw;
+}
+
+.aboutContentExterior.Left{
+    margin-left: 0;
+    padding-left: 7vw;
+}
+
+.aboutContentExterior.Right{
+    margin-right: 0;
+    padding-right: 7vw;
+}
