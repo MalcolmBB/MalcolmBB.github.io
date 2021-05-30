@@ -12,18 +12,14 @@
     gap: 1vw;
 }
 
-.contactContainer form {
+.contactContainer > form {
     display: flex;
     flex-direction: column;
     gap: 1vw;
 }
 
-.contactContainer form Button{
+.contactContainer > form > Button{
     align-self: flex-end;
     margin-right: 5vw;
     margin-top: 1.5vw;
-}
-
-.contactContainer form{
-    font-family: 'Source Code Pro', monospace;
 }

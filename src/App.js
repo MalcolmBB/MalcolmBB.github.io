@@ -8,12 +8,13 @@ import Home from './components/Pages/Home/Home';
 import About from './components/Pages/About/About';
 import PastWork from "./components/Pages/PastWork/PastWork";
 import ContactMe from "./components/Pages/ContactMe/ContactMe";
-
+import ScrollToTop from "./scrollToTop";
 
 class App extends Component {
     render(){
         return (
             <Router basename={"/"}>
+                <ScrollToTop/>
                 <React.Fragment>
                     <Switch>
                         <LoadingScreen path= "/" exact component={LoadingScreen}/>

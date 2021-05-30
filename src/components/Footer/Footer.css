@@ -8,14 +8,7 @@ footer{
     align-items: center;
     background: var(--light);
     padding: 2rem;
-}
-
-#footerLogo{
-    width: 15vh;
-}
-
-textarea{
-    resize: none;
+    margin-top: 5rem;
 }
 
 .LogoContainer{
@@ -24,15 +17,15 @@ textarea{
     cursor: pointer;
 }
 
-.LogoContainer svg circle {
+.LogoContainer > svg > circle {
     fill: var(--pDark);
 }
 
-.LogoContainer svg path {
+.LogoContainer > svg > path {
     fill: var(--light);
 }
 
-.LogoContainer:hover svg circle, .LogoContainer:focus svg circle {
+.LogoContainer:hover > svg > circle, .LogoContainer:focus > svg > circle {
     fill: var(--pLight);
 }
 

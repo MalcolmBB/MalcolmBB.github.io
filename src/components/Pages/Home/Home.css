@@ -1,12 +1,7 @@
 .mainContainer{
     width: 100%;
     height: auto;
-    padding: 10vh 5vw;
-}
-
-.main{
-    padding: 5vh 2.5vw;
-    background: var(--light);
+    padding: 2rem 5vw;
 }
 
 .PastWorkContainer{
@@ -14,4 +9,10 @@
     margin-right: -5vw;
     padding: 5vh 5vw;
     background: var(--light);
+}
+
+.PastWorkContainer > h3{
+    font-size: 3rem;
+    color: var(--primary);
+    text-align: center;
 }

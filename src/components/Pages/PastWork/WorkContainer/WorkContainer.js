@@ -1,6 +1,9 @@
 import React from 'react';
 import Button from '../../../Button/Button';
+import {Slide} from 'react-awesome-reveal';
 import "./WorkContainer.css"
+
+var enterDir;
 
 function WorkContainer({
     type,
@@ -10,160 +13,85 @@ function WorkContainer({
     imgAlt,
     paragraph,
     buttonClassName,
-    buttonLinkTo
+    buttonLinkTo,
+    buttonType="Link",
+    buttonValue="View GitHub repository",
+    classes ="ExteriorContainer"
 }) {
     if (type === "mainAbout") {
-        return mainAbout({
-            Title,
-            imgSrc,
-            imgAlt,
-            paragraph,
-            buttonClassName,
-            buttonLinkTo
-        });
-    } else if (type === "PastWork") {
+        classes += " Left MainAbout";
+        buttonType="Navigation";
+        buttonValue="More about me!";
+    }
+    else {
         if (sideKey % 2 === 0) {
-            return RightWork({
-                Title,
-                imgSrc,
-                imgAlt,
-                paragraph,
-                buttonClassName,
-                buttonLinkTo
-            });
+            classes += " Right";
+            enterDir="right";
         } else {
-            return LeftWork({
-                Title,
-                imgSrc,
-                imgAlt,
-                paragraph,
-                buttonClassName,
-                buttonLinkTo
-            });
+            classes += " Left";
+            enterDir="left";
         }
-    } else if (type === "mainWork") {
-        if (sideKey % 2 === 0) {
-            return RightMainWork({
-                Title,
-                imgSrc,
-                imgAlt,
-                paragraph,
-                buttonClassName,
-                buttonLinkTo
-            });
-        } else {
-            return LeftMainWork({
-                Title,
-                imgSrc,
-                imgAlt,
-                paragraph,
-                buttonClassName,
-                buttonLinkTo
-            });
+        if (type === "mainWork") {
+            classes += " MainWork";
+            buttonClassName += " invert";
         }
     }
+    return(
+        <Slide
+            triggerOnce
+            duration={1200}
+            direction={enterDir}
+            fraction={0.7}
+            >
+            {Work({
+                Title,
+                imgSrc,
+                imgAlt,
+                paragraph,
+                buttonClassName,
+                buttonLinkTo,
+                buttonValue,
+                buttonType,
+                classes
+            })}
+        </Slide>)
 }
 
-function mainAbout({
+function Work({
     Title,
     imgSrc,
     imgAlt,
     paragraph,
     buttonClassName,
-    buttonLinkTo
+    buttonLinkTo,
+    buttonValue,
+    buttonType,
+    classes
 }) {
-    return (<div className="Left MainAbout ExteriorContainer">
-        <h1>{Title}</h1>
-        <div className="ContentContainer">
-            <img src={imgSrc} alt={imgAlt}/>
-            <div className="SummaryContainer">
-                <p>{paragraph}</p>
-                <Button type="Navigation" className={buttonClassName} linkTo={buttonLinkTo} value="More about me"></Button>
+    if (classes.includes("Right")){
+        return (<div className={classes}>
+            <h2>{Title}</h2>
+            <div className="ContentContainer">
+                <div className="SummaryContainer">
+                    <p>{paragraph}</p>
+                    <Button type={buttonType} className={buttonClassName} linkTo={buttonLinkTo} value={buttonValue}></Button>
+                </div>
+                <img src={imgSrc} alt={imgAlt}/>
             </div>
-        </div>
-    </div>)
-}
-
-function LeftMainWork({
-    Title,
-    imgSrc,
-    imgAlt,
-    paragraph,
-    buttonClassName,
-    buttonLinkTo
-}) {
-    buttonClassName = buttonClassName + " invert";
-    return (<div className="Left MainWorkExteriorContainer">
-        <h3>{Title}</h3>
-        <div className="MainWorkContentContainer">
-            <img src={imgSrc} alt={imgAlt}/>
-            <div className="MainWorkSummaryContainer">
-                <p>{paragraph}</p>
-                <Button type="Link" className={buttonClassName} linkTo={buttonLinkTo} value="View GitHub repository"></Button>
+        </div>);
+    }
+    else{
+        return (<div className={classes}>
+            <h2>{Title}</h2>
+            <div className="ContentContainer">
+                <img src={imgSrc} alt={imgAlt}/>
+                <div className="SummaryContainer">
+                    <p>{paragraph}</p>
+                    <Button type={buttonType} className={buttonClassName} linkTo={buttonLinkTo} value={buttonValue}></Button>
+                </div>
             </div>
-        </div>
-    </div>)
-}
-
-function RightMainWork({
-    Title,
-    imgSrc,
-    imgAlt,
-    paragraph,
-    buttonClassName,
-    buttonLinkTo
-}) {
-    buttonClassName = buttonClassName + " invert";
-    return (<div className="Right MainWorkExteriorContainer">
-        <h3>{Title}</h3>
-        <div className="MainWorkContentContainer">
-            <div className="MainWorkSummaryContainer">
-                <p>{paragraph}</p>
-                <Button type="Link" className={buttonClassName} linkTo={buttonLinkTo} value="View GitHub repository"></Button>
-            </div>
-            <img src={imgSrc} alt={imgAlt}/>
-        </div>
-    </div>)
-}
-
-function RightWork({
-    Title,
-    imgSrc,
-    imgAlt,
-    paragraph,
-    buttonClassName,
-    buttonLinkTo
-}) {
-    return (<div className="Right ExteriorContainer">
-        <h2>{Title}</h2>
-        <div className="ContentContainer">
-            <div className="SummaryContainer">
-                <p>{paragraph}</p>
-                <Button type="Link" className={buttonClassName} linkTo={buttonLinkTo} value="View GitHub repository"></Button>
-            </div>
-            <img src={imgSrc} alt={imgAlt}/>
-        </div>
-    </div>)
-}
-
-function LeftWork({
-    Title,
-    imgSrc,
-    imgAlt,
-    paragraph,
-    buttonClassName,
-    buttonLinkTo
-}) {
-    return (<div className="Left ExteriorContainer">
-        <h2>{Title}</h2>
-        <div className="ContentContainer">
-            <img src={imgSrc} alt={imgAlt}/>
-            <div className="SummaryContainer">
-                <p>{paragraph}</p>
-                <Button type="Link" className={buttonClassName} linkTo={buttonLinkTo} value="View GitHub repository"></Button>
-            </div>
-        </div>
-    </div>)
+        </div>);
+    }
 }
 
 export default WorkContainer;

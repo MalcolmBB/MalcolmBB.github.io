@@ -6,16 +6,22 @@ import WorkList from '../PastWork/WorkList';
 import './Home.css';
 
 var arr = []
-while (arr.length < 8){
-    var r = Math.floor(Math.random() * WorkList.length);
-    if (arr.indexOf(r) === -1) arr.push(r);
-}
-
-for (var i = 0; i < arr.length; i++){
-    arr[i] = WorkList[arr[i]];
-}
 
 class Home extends React.Component {
+    constructor(){
+        super();
+
+        arr=[];
+
+        while (arr.length < 6){
+            var r = Math.floor(Math.random() * WorkList.length);
+            if (arr.indexOf(r) === -1) arr.push(r);
+        }
+
+        for (var i = 0; i < arr.length; i++){
+            arr[i] = WorkList[arr[i]];
+        }
+    }
     render(){
         return (
             <div>
@@ -51,6 +57,7 @@ class Home extends React.Component {
                                 buttonLinkTo="/About"
                             ></WorkContainer>
                             <div className="PastWorkContainer">
+                                <h3>Some of my past work</h3>
                                     {arr.map((wl, key) => (
                                         <WorkContainer
                                             key={key}

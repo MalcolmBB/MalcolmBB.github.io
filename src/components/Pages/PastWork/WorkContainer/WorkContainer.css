@@ -1,8 +1,8 @@
 .ExteriorContainer{
     padding: 5vh 2.5vw;
     background: var(--light);
-    margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     padding-left: 5vw;
 }
 
@@ -19,7 +19,7 @@
     margin-bottom: 1rem;
 }
 
-.MainAbout > h1 {
+.MainAbout > h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -57,35 +57,58 @@
     align-self: flex-start;
 }
 
-.MainWorkExteriorContainer{
-    padding: 5vh 2.5vw;
+.MainWork{
     background: var(--pDark);
-    margin-top: 2rem;
-    margin-bottom: 10rem;
-    margin-right: -5vw;
-    padding-left: 5vw;
     color: var(--light);
 }
 
-.MainWorkExteriorContainer > h3 {
+.MainWork > h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.MainWorkContentContainer {
-    display: flex;
-    justify-content: flex-end;
-}
+@media only screen and (width<768px) {
+    .ContentContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2.5rem;
+    }
 
-.MainWorkContentContainer > img {
-    width: 20vw;
-    height: auto;
-    margin: 0 2rem;
-}
+    .ContentContainer > img {
+        width: 60vw;
+        height: auto;
+        margin: 0 2rem;
+    }
 
-.MainWorkSummaryContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    .MainAbout > .ContentContainer > img {
+        width: 60vw;
+    }
+
+    .ExteriorContainer > h2 {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    .MainAbout > h2 {
+        font-size: 8rem;
+        margin-bottom: 1rem;
+    }
+
+    .MainWork > h2 {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .SummaryContainer > p {
+        margin-top: 5rem;
+    }
+
+    .SummaryContainer > .button {
+        font-size: 2rem;
+    }
+
+    .MainAbout .SummaryContainer > .button {
+        font-size: 3rem;
+    }
 }

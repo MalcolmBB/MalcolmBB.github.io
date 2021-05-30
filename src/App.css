@@ -2,17 +2,11 @@
 
 
 :root {
-    --pLight: #5f5b5a;
     --light: #ffffff;
-    --primary: #ff5241;
+    --pLight: #5f5b5a;
+    --primary: #3e3b3a;
+    --pDark: #262626;
     --dark: #000000;
-    --pDark: #303030;
-
-    /* --pDark: #5f5b5a;
-    --dark: #ffffff;
-    --primary: #ff5241;
-    --light: #000000;
-    --pLight: #303030; */
     font-size: 1vw;
 }
 

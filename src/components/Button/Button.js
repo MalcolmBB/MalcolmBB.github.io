@@ -22,6 +22,7 @@ function Button({type, className, linkTo, value, linePos, onClick}){
         }
     }
     else if (type === "Navigation"){
+        if (value === ""){return navButtonEmpty({className, linkTo, linePos});}
         return navButton({className, linkTo, value, linePos});
     }
     else if (type === "Submit"){
@@ -67,6 +68,30 @@ function navButton({className, linkTo, value, linePos}){
                 <span>
                     &lt;{value}/&gt;
                 </span>
+            </MaterialButton>
+        </StylesProvider>
+    );
+}
+
+function navButtonEmpty({className, linkTo, linePos}){
+    return (
+        <StylesProvider injectFirst>
+            <MaterialButton
+                className={className}
+                onClick={() => {
+                    window.scroll({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                    document.activeElement.blur();
+                }}
+                component={Link}
+                to={linkTo}
+                disableFocusRipple={true}
+                disableRipple={true}
+                >
+                <SocialIcon network="email" tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"4rem", height:"4rem", padding:0}}/>
             </MaterialButton>
         </StylesProvider>
     );

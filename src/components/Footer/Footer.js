@@ -28,9 +28,9 @@ const socialLinks = [
     }
     ,
     {
-        type: "Link",
+        type: "Navigation",
         className: "button bEmail",
-        linkTo: "mailto:malcolmbaatjies.gmail.com",
+        linkTo: "/Contact-me",
         linePos: "bottomLine"
     }
 ]
