@@ -31,27 +31,25 @@ class ContactMe extends React.Component {
     }
 
     handleSubmit(event) {
-        console.log(this.state);
-        // document.activeElement.blur();
+        document.activeElement.blur();
         if ((this.state.name !=="" && this.state.name !=="-1") &&
         (validator.validate(this.state.email) && (this.state.email !=="default@default.com")) &&
         (this.state.message !=="" && this.state.message !=="-1")){
-            console.log("Sending");
-            // event.preventDefault();
-            // const { name, email, message } = this.state;
-            // const templateParams = {
-            //   from_name: name,
-            //   from_email: email,
-            //   to_name: 'Malcolm Baatjies',
-            //   message_html: message,
-            // };
-            // emailjs.send(
-            //     'service_x3cxr0m',
-            //     'template_7y5fvdu',
-            //     templateParams,
-            //     'user_NigdOEjlWhj5f3Jjv5Vw3'
-            // )
-            // this.resetForm();
+            event.preventDefault();
+            const { name, email, message } = this.state;
+            const templateParams = {
+              from_name: name,
+              from_email: email,
+              to_name: 'Malcolm Baatjies',
+              message_html: message,
+            };
+            emailjs.send(
+                'service_x3cxr0m',
+                'template_7y5fvdu',
+                templateParams,
+                'user_NigdOEjlWhj5f3Jjv5Vw3'
+            )
+            this.resetForm();
         }
         else {
             if (this.state.name ==="-1"){
