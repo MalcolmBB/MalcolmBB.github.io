@@ -68,30 +68,16 @@ function Work({
     buttonType,
     classes
 }) {
-    if (classes.includes("Right")){
-        return (<div className={classes}>
-            <h2>{Title}</h2>
-            <div className="ContentContainer">
-                <div className="SummaryContainer">
-                    <p>{paragraph}</p>
-                    <Button type={buttonType} className={buttonClassName} linkTo={buttonLinkTo} value={buttonValue}></Button>
-                </div>
-                <img src={imgSrc} alt={imgAlt}/>
+    return (<div className={classes}>
+        <h2>{Title}</h2>
+        <div className="ContentContainer">
+            <img src={imgSrc} alt={imgAlt}/>
+            <div className="SummaryContainer">
+                <p>{paragraph}</p>
+                <Button type={buttonType} className={buttonClassName} linkTo={buttonLinkTo} value={buttonValue}></Button>
             </div>
-        </div>);
-    }
-    else{
-        return (<div className={classes}>
-            <h2>{Title}</h2>
-            <div className="ContentContainer">
-                <img src={imgSrc} alt={imgAlt}/>
-                <div className="SummaryContainer">
-                    <p>{paragraph}</p>
-                    <Button type={buttonType} className={buttonClassName} linkTo={buttonLinkTo} value={buttonValue}></Button>
-                </div>
-            </div>
-        </div>);
-    }
+        </div>
+    </div>);
 }
 
 export default WorkContainer;

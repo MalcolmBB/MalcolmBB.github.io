@@ -1,7 +1,7 @@
 footer{
     width: 100%;
     height: auto;
-    align-self: baseline;
+    align-self:baseline;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,4 +56,25 @@ footer{
 
 .SiteMap:hover, .SiteMap:focus{
     color: var(--dark);
+}
+
+@media only screen and (width<768px){
+    :root{
+        --iconSize: 16rem;
+        --iconMargin: 0;
+    }
+    .socialLinks{
+        flex-direction: column;
+        gap:5rem;
+    }
+
+    .LogoContainer{
+        width: 20vw;
+    }
+
+    .legalities{
+        margin-top: 10vw;
+        font-size: 4rem;
+    }
+
 }

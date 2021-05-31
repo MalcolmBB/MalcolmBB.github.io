@@ -1,5 +1,7 @@
 :root{
     --iconColor: var(--light);
+    --iconSize: 5rem;
+    --iconMargin: -1rem;
 }
 
 .button{
@@ -167,4 +169,24 @@ color: var(--light);
 
 .headerHeader:hover, .headerHeader:focus {
     background: transparent;
+}
+
+@media only screen and (width<768px){
+    .topLine {
+        border: none;
+        border-bottom: 5px solid var(--pDark);
+    }
+
+    .invert.topLine {
+        border: none;
+        border-bottom: 5px solid var(--light);
+    }
+
+    .topLine.button:hover:before, .topLine.button:focus:before, .topLine.invert:hover:before, .topLine.invert:focus:before{
+        top:0;
+    }
+
+    .topLine.button:before{
+        top: 100%;
+    }
 }

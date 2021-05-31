@@ -105,6 +105,8 @@ class ContactMe extends React.Component {
                         <h2 className="contactHeader">Please enter your details and message below</h2>
                         <form onSubmit={this.handleSubmit}>
                             <TextField
+                                inputProps={{style:{fontSize:"var(--inputFontSize)"}}}
+                                InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
                                 inputRef={nameField => (this.nameField = nameField)}
                                 value={this.state.defaultName}
                                 label="Full Name"
@@ -122,6 +124,8 @@ class ContactMe extends React.Component {
                                 helperText={this.state.nameError}
                             />
                         <TextField
+                            inputProps={{style:{fontSize:"var(--inputFontSize)"}}}
+                            InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
                             inputRef={emailField => (this.emailField = emailField)}
                             type={"email"}
                             value={this.state.defaultEmail}
@@ -143,6 +147,8 @@ class ContactMe extends React.Component {
                             helperText={this.state.emailError}
                             />
                         <TextField
+                            inputProps={{style:{fontSize:"var(--inputFontSize)", lineHeight:"var(--inputFontSize)"}}}
+                            InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
                             inputRef={messageField => (this.messageField = messageField)}
                             className="messageField"
                             value={this.state.defaultMessage}

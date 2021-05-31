@@ -91,7 +91,7 @@ function navButtonEmpty({className, linkTo, linePos}){
                 disableFocusRipple={true}
                 disableRipple={true}
                 >
-                <SocialIcon network="email" tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"4rem", height:"4rem", padding:0}}/>
+                <SocialIcon network="email" tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--iconSize)", height:"var(--iconSize)", padding:0, margin:"var(--iconMargin)"}}/>
             </MaterialButton>
         </StylesProvider>
     );
@@ -109,7 +109,7 @@ function linkButton({className, linkTo, value, linePos}){
                 target="_blank"
                 disableFocusRipple={true}
                 disableRipple={true}
-                endIcon={<SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)"/>}
+                endIcon={<SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"4em", height:"4em", padding:0, margin:"-1em"}}/>}
                 >
                 <span>
                     &lt;{value}/&gt;
@@ -132,7 +132,7 @@ function linkButtonEmpty({className, linkTo, linePos}){
                 disableFocusRipple={true}
                 disableRipple={true}
                 >
-                <SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"4rem", height:"4rem", padding:0}}/>
+                <SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--iconSize)", height:"var(--iconSize)", padding:0, margin:"var(--iconMargin)"}}/>
             </MaterialButton>
         </StylesProvider>
     );

@@ -30,6 +30,9 @@ header {
 @media only screen and (width<768px) {
     header{
         height: 6vh;
+        position: fixed;
+        z-index: 6;
+        top: 0;
     }
 
     .logo>* {
@@ -37,17 +40,18 @@ header {
     }
 
     .headerButtons {
-        width: 100%;
+        width: 0;
         height: 94vh;
         top: 0;
-        left: 0;
+        left: 100%;
+        right: 0;
         margin-top: 6vh;
-        margin-left: 100%;
         background: var(--light);
         position: fixed;
         z-index: 5;
         padding: 10rem;
         padding-top: 20rem;
+        display: grid;
     }
 
     .headerButtons>* {
@@ -109,35 +113,33 @@ header {
 
     .showMenu + .headerButtons {
         animation: menuShow 1.5s ease forwards;
-        display: grid;
     }
 
     .hideMenu + .headerButtons {
         animation: menuHide 1.5s ease forwards;
-        display: none;
     }
 
     @keyframes menuShow {
         from {
-            margin-left: 100%;
-            display: none;
+            left: 100%;
+            width:0;
         }
 
         to {
-            margin-left: 0;
-            display: grid;
+            left: 0;
+            width:100%;
         }
     }
 
     @keyframes menuHide {
         from {
-            margin-left: 0;
-            display: grid;
+            left: 0;
+            width:100%;
         }
 
         to {
-            margin-left: 100%;
-            display: none;
+            left: 100%;
+            width:0;
         }
     }
 }

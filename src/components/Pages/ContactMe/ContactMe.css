@@ -1,3 +1,7 @@
+:root{
+    --inputFontSize: 1.2rem;
+}
+
 .mainContactContainer{
     width: 100%;
     height: auto;
@@ -22,4 +26,21 @@
     align-self: flex-end;
     margin-right: 5vw;
     margin-top: 1.5vw;
+}
+
+@media only screen and (width<768px) {
+    :root{
+        --inputFontSize: 5rem;
+    }
+    .mainContactContainer{
+        margin-top: 20rem;
+        font-size: 4rem;
+    }
+    .contactContainer > form {
+        gap: 5vw;
+    }
+    .contactContainer > form > Button{
+        font-size: 5rem;
+        margin: 4vw;
+    }
 }
