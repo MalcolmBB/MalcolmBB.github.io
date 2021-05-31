@@ -17,7 +17,7 @@
     cursor: pointer;
     color: var(--pDark);
     background: transparent;
-    border-radius: 0;
+    border-radius: .25rem;
 }
 
 .header.button{
@@ -26,22 +26,22 @@
 
 .leftLine {
     border: none;
-    border-left: 5px solid var(--pDark);
+    border-left: .35rem solid var(--pDark);
 }
 
 .rightLine {
     border: none;
-    border-right: 5px solid var(--pDark);
+    border-right: .35rem solid var(--pDark);
 }
 
 .bottomLine {
     border: none;
-    border-bottom: 5px solid var(--pDark);
+    border-bottom: .35rem solid var(--pDark);
 }
 
 .topLine {
     border: none;
-    border-top: 5px solid var(--pDark);
+    border-top: .35rem solid var(--pDark);
 }
 
 :root .button{
@@ -54,22 +54,22 @@
 
 .invert.leftLine {
     border: none;
-    border-left: 5px solid var(--light);
+    border-left: .35rem solid var(--light);
 }
 
 .invert.rightLine {
     border: none;
-    border-right: 5px solid var(--light);
+    border-right: .35rem solid var(--light);
 }
 
 .invert.bottomLine {
     border: none;
-    border-bottom: 5px solid var(--light);
+    border-bottom: .35rem solid var(--light);
 }
 
 .invert.topLine {
     border: none;
-    border-top: 5px solid var(--light);
+    border-top: .35rem solid var(--light);
 }
 
 
@@ -77,29 +77,21 @@
     --iconColor: var(--light);
 }
 
-.button span {
-    z-index: 3;
-    transition: .5s;
-}
-
 .button *{
     z-index: 3;
     transition: .5s;
 }
 
-.button:hover, .button:focus span{
-color: var(--light);
+.button:hover, .button:focus > span{
+    color: var(--light);
 }
 
 .button:hover, .button:focus {
     --iconColor: var(--light);
-}
-
-.button:hover, .button:focus{
     background: transparent;
 }
 
-.invert:hover, .invert:focus span{
+.invert:hover, .invert:focus > span{
     color: var(--pDark);
 }
 

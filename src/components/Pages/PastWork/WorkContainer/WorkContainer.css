@@ -8,10 +8,14 @@
 
 .Left{
     margin-left: -5vw;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .Right{
     margin-right: -5vw;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 }
 
 .ExteriorContainer > h2 {
