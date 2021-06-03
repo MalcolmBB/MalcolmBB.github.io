@@ -1,6 +1,8 @@
 :root{
     --iconColor: var(--light);
     --iconSize: 5rem;
+    --textIconSize: 5rem;
+    --textIconMargin: -1rem;
     --iconMargin: -1rem;
 }
 

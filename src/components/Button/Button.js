@@ -109,7 +109,7 @@ function linkButton({className, linkTo, value, linePos}){
                 target="_blank"
                 disableFocusRipple={true}
                 disableRipple={true}
-                endIcon={<SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"4em", height:"4em", padding:0, margin:"-1em"}}/>}
+                endIcon={<SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--textIconSize)", height:"var(--textIconSize)", padding:0, margin:"var(--textIconMargin)"}}/>}
                 >
                 <span>
                     &lt;{value}/&gt;

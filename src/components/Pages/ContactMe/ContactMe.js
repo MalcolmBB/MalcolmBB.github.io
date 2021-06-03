@@ -153,6 +153,7 @@ class ContactMe extends React.Component {
                             className="messageField"
                             value={this.state.defaultMessage}
                             label="Message"
+                            spellCheck
                             fullWidth
                             multiline
                             rows={8}

@@ -80,7 +80,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 2.5rem;
+        font-size: 3rem;
+        line-height: 5rem;
     }
 
     .Right > .ContentContainer{
@@ -117,10 +118,18 @@
     }
 
     .SummaryContainer > .button {
-        font-size: 2rem;
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+
+    :root{
+        --textIconSize: 12rem;
+        --textIconMargin: -1.6rem;
     }
 
     .MainAbout .SummaryContainer > .button {
+        margin-top: 3rem;
+        margin-bottom: -3rem;
         font-size: 3rem;
     }
 }

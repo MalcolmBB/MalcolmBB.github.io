@@ -4,6 +4,55 @@
     padding: 2vw;
 }
 
+.ExteriorContainer{
+    padding: 5vh 2.5vw;
+    background: var(--light);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-left: 5vw;
+}
+
+.Left{
+    margin-left: -5vw;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.MainAbout > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.ContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.ContentContainer > img {
+    width: 20vw;
+    height: auto;
+    margin: 0 2rem;
+}
+
+.MainAbout > .ContentContainer > img {
+    width: 25vw;
+}
+
+.SummaryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Left > .ContentContainer > .SummaryContainer {
+    align-items: flex-end;
+}
+
+.Left > .ContentContainer > .SummaryContainer > p{
+    align-self: flex-start;
+}
+
 .aboutContentExterior h2{
     font-size: 2rem;
     margin-bottom: 2vw;
@@ -17,4 +66,19 @@
 .aboutContentExterior.Right{
     margin-right: 0;
     padding-right: 7vw;
+}
+
+@media only screen and (width<768px){
+    body{
+        padding-top: 10rem;
+    }
+    .aboutContentExterior h2{
+        font-size: 6rem;
+    }
+
+    .aboutContentExterior > div > p{
+        font-size: 3rem;
+        line-height: 5rem;
+        margin: 5rem 0;
+    }
 }
