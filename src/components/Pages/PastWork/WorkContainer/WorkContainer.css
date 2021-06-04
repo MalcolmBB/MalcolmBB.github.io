@@ -23,11 +23,6 @@
     margin-bottom: 1rem;
 }
 
-.MainAbout > h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
 .ContentContainer {
     display: flex;
     justify-content: flex-end;
@@ -41,10 +36,6 @@
     width: 20vw;
     height: auto;
     margin: 0 2rem;
-}
-
-.MainAbout > .ContentContainer > img {
-    width: 25vw;
 }
 
 .SummaryContainer {
@@ -94,17 +85,8 @@
         margin: 0 2rem;
     }
 
-    .MainAbout > .ContentContainer > img {
-        width: 60vw;
-    }
-
     .ExteriorContainer > h2 {
         font-size: 6rem;
-        margin-bottom: 1rem;
-    }
-
-    .MainAbout > h2 {
-        font-size: 8rem;
         margin-bottom: 1rem;
     }
 
@@ -125,11 +107,5 @@
     :root{
         --textIconSize: 12rem;
         --textIconMargin: -1.6rem;
-    }
-
-    .MainAbout .SummaryContainer > .button {
-        margin-top: 3rem;
-        margin-bottom: -3rem;
-        font-size: 3rem;
     }
 }

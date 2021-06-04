@@ -20,6 +20,7 @@ class About extends React.Component {
                                 imgSrc={ai.imgSrc}
                                 imgAlt={ai.imgAlt}
                                 paragraph={ai.paragraph}
+                                cards={ai.cards}
                             ></AboutContent>
                         ))}
                     </div>

@@ -26,4 +26,6 @@ body{
     font-weight: bold;
     color: var(--dark);
     background: var(--pDark);
+    width: auto;
+    overflow-x: hidden;
 }

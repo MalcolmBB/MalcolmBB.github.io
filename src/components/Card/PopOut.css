@@ -1,0 +1,27 @@
+.PopOut{
+    background: var(--primary);
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 0 2rem 2rem 2rem;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.PopOut > *{
+    flex-basis: 100%;
+}
+
+.popRight{
+    margin-left: -2rem;
+    padding-left: 4rem;
+    margin-right: -5rem;
+    padding-right: 7rem;
+}
+
+.popLeft{
+    margin-right: 2rem;
+    padding-right: 4rem;
+    margin-left: -9rem;
+    padding-left: 7rem;
+}

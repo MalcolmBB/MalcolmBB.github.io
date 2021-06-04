@@ -1,11 +1,14 @@
 import React from 'react';
 import Button from '../../../Button/Button';
+import PopOut from '../../../Card/PopOut';
 import {Slide} from 'react-awesome-reveal';
 import "./AboutContent.css"
 
 var dir;
+var threeCards = [];
+var temp = [];
 
-function AboutContent({type="Text", sideKey=0, Title="Placeholder", imgSrc, imgAlt, paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", classes="aboutContentExterior", buttonClassName, buttonLinkTo, buttonValue, buttonType}) {
+function AboutContent({type="Text", sideKey=0, Title="Placeholder", imgSrc, imgAlt, paragraph="-EmptyThingy-", cards, classes="aboutContentExterior", buttonClassName, buttonLinkTo, buttonValue, buttonType}) {
     if (sideKey % 2 === 0){
         classes += " Left";
         dir = "left";
@@ -28,21 +31,57 @@ function AboutContent({type="Text", sideKey=0, Title="Placeholder", imgSrc, imgA
     }
     else if (type === "Picture"){
         classes += " Picture";
-        return(defaultPictureAboutContent({Title, paragraph, imgSrc, imgAlt, classes}));
+        return(
+            <Slide
+                triggerOnce
+                duration={1200}
+                direction={dir}
+                fraction={0.5}
+                >
+                    {defaultPictureAboutContent({Title, paragraph, imgSrc, imgAlt, classes})}
+            </Slide>
+        );
     }
     else if (type === "Button"){
-        classes = "Left MainAbout ExteriorContainer";
-        return(buttonAboutContent({
-            Title,
-            imgSrc,
-            imgAlt,
-            paragraph,
-            buttonClassName,
-            buttonLinkTo,
-            buttonValue,
-            buttonType,
-            classes
-        }));
+        classes = "MainAbout";
+        return(
+            <Slide
+                triggerOnce
+                duration={1200}
+                direction={dir}
+                fraction={0.5}
+                >
+                {buttonAboutContent({
+                    Title,
+                    imgSrc,
+                    imgAlt,
+                    paragraph,
+                    buttonClassName,
+                    buttonLinkTo,
+                    buttonValue,
+                    buttonType,
+                    classes
+                })}
+            </Slide>
+        );
+    }
+    else if (type === "Card"){
+        classes += " cardsContainer"
+        return (
+            <Slide
+                triggerOnce
+                duration={1000}
+                direction={dir}
+                fraction={0.2}
+                >
+                {cardsAboutContent({
+                Title,
+                paragraph,
+                classes,
+                cards,
+                })}
+            </Slide>
+        );
     }
 }
 
@@ -72,7 +111,6 @@ function buttonAboutContent({
     buttonType,
     classes
 }) {
-    console.log("Hey");
     return (<div className={classes}>
         <h2>{Title}</h2>
         <div className="ContentContainer">
@@ -114,6 +152,44 @@ function defaultPictureAboutContent({Title, paragraph, imgSrc, imgAlt, classes})
             </div>
         );
     }
+}
+
+function cardsAboutContent({Title, paragraph, classes, cards}){
+    threeCards = [];
+    cards.forEach((card) => {
+        temp.push(card);
+        if ((temp.length === 3) || (cards.indexOf(card) === cards.length - 1)){
+            threeCards.push(temp)
+            temp = []
+        }
+    })
+    if (paragraph === "-EmptyThingy-"){
+        return (
+            <div className={classes}>
+                <h2>{Title}</h2>
+                {threeCards.map((card, key) => (
+                    <PopOut cards={card} sideKey={key}></PopOut>
+                ))}
+            </div>
+        );
+    }
+    return (
+        <div className={classes}>
+            <h2>{Title}</h2>
+                <div>
+                    {paragraph.map((par) => (
+                    <p style={{whiteSpace:"pre-line",}}>
+                        {par}
+                    </p>
+                    ))}
+                </div>
+                <br></br>
+                <br></br>
+            {threeCards.map((card, key) => (
+                <PopOut cards={card} sideKey={key}></PopOut>
+            ))}
+        </div>
+    );
 }
 
 export default AboutContent;

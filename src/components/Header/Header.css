@@ -35,10 +35,6 @@ header {
         top: 0;
     }
 
-    body{
-        margin-top: 10rem;
-    }
-
     .logo>* {
         font-size: 6rem;
     }
@@ -64,7 +60,7 @@ header {
     }
 
     .headerButtons>*>*{
-        min-width: 70vw;
+        min-width: 100vw;
     }
 
     .menuButton {
