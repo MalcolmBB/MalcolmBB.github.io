@@ -30,12 +30,24 @@ const headerButtonsList = [
     }
 ]
 
+
 function Header(){
     const [isOpened, setOpened] = useState(false);
 
     const toggleOpen = () => {
         setOpened(!isOpened);
     };
+
+    const clickThing = () => {
+        setOpened(false);
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+        document.activeElement.blur();
+    };
+
     return (
         <header>
             <div className="logo">
@@ -44,6 +56,7 @@ function Header(){
                         className="headerHeader"
                         linkTo="/Home"
                         value="Malcolm Baatjies"
+                        onClick={clickThing}
                     ></Button>
                 <div
                     className={isOpened ? "menuButton showMenu opened":"menuButton hideMenu"}
@@ -62,6 +75,7 @@ function Header(){
                                 className={bButton.className}
                                 linkTo={bButton.linkTo}
                                 value={bButton.value}
+                                onClick={clickThing}
                             ></Button>
                         ))}
                 </div>

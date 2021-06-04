@@ -4,6 +4,7 @@
     --textIconSize: 5rem;
     --textIconMargin: -1rem;
     --iconMargin: -1rem;
+    --lineWidth: .35rem;
 }
 
 .button{
@@ -28,22 +29,22 @@
 
 .leftLine {
     border: none;
-    border-left: .35rem solid var(--pDark);
+    border-left: var(--lineWidth) solid var(--pDark);
 }
 
 .rightLine {
     border: none;
-    border-right: .35rem solid var(--pDark);
+    border-right: var(--lineWidth) solid var(--pDark);
 }
 
 .bottomLine {
     border: none;
-    border-bottom: .35rem solid var(--pDark);
+    border-bottom: var(--lineWidth) solid var(--pDark);
 }
 
 .topLine {
     border: none;
-    border-top: .35rem solid var(--pDark);
+    border-top: var(--lineWidth) solid var(--pDark);
 }
 
 :root .button{
@@ -56,22 +57,22 @@
 
 .invert.leftLine {
     border: none;
-    border-left: .35rem solid var(--light);
+    border-left: var(--lineWidth) solid var(--light);
 }
 
 .invert.rightLine {
     border: none;
-    border-right: .35rem solid var(--light);
+    border-right: var(--lineWidth) solid var(--light);
 }
 
 .invert.bottomLine {
     border: none;
-    border-bottom: .35rem solid var(--light);
+    border-bottom: var(--lineWidth) solid var(--light);
 }
 
 .invert.topLine {
     border: none;
-    border-top: .35rem solid var(--light);
+    border-top: var(--lineWidth) solid var(--light);
 }
 
 
@@ -120,8 +121,8 @@
 .button:before {
     content: "";
     position: absolute;
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 100%;
     background: var(--pDark);
     transition: .5s;
     z-index: 2;
@@ -166,14 +167,17 @@
 }
 
 @media only screen and (width<768px){
+    :root{
+        --lineWidth: 1rem;
+    }
     .topLine {
         border: none;
-        border-bottom: 5px solid var(--pDark);
+        border-bottom: var(--lineWidth) solid var(--pDark);
     }
 
     .invert.topLine {
         border: none;
-        border-bottom: 5px solid var(--light);
+        border-bottom: var(--lineWidth) solid var(--light);
     }
 
     .topLine.button:hover:before, .topLine.button:focus:before, .topLine.invert:hover:before, .topLine.invert:focus:before{

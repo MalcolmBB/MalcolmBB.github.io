@@ -5,7 +5,7 @@ import './PopOut.css';
 
 var dir;
 
-function PopOut({cards, sideKey, classes="PopOut"}){
+function PopOut({cards, sideKey, classes="PopOut", startSide = "startLeft"}){
     if (sideKey % 2 === 0){
         classes += " popRight";
         dir = "right";
@@ -14,11 +14,13 @@ function PopOut({cards, sideKey, classes="PopOut"}){
         classes += " popLeft";
         dir = "left";
     }
+    classes += " " + startSide;
     return (
         <Slide
             triggerOnce
             duration={1200}
-            delay={900}
+            cascade
+            damping={1}
             direction={dir}
             fraction={0.5}
             >

@@ -9,23 +9,55 @@ const AboutInfo =[
     {
         type:"Card",
         Title:"Education",
-        paragraph:["I have attended many of the top schools in South Africa including:","\n-Grey College, Bloemfontein.", "\n-Kind Edwards VII School, Johannesburg.", "\n-Rondebosch Boys' High School, Cape Town", "\nI matriculated from Rondebosch Boys's High School in 2018 and started my first year at the University of Cape Town as an undergraduate student in the Department of Science in 2019. I am planning on graduating with a Bachelors degree in Science majoring in Computer Science and Computer Engineering at the end of 2021, thereafter I plan on pursuing and Honours degree in Computer Science"],
+        paragraph:["I have attended many of the top schools in South Africa as shown below.", "\nI matriculated from Rondebosch Boys's High School in 2018 and started my first year at the University of Cape Town as an undergraduate student in the Department of Science in 2019. I am planning on graduating with a Bachelors degree in Science majoring in Computer Science and Computer Engineering at the end of 2021, thereafter I plan on pursuing and Honours degree in Computer Science"],
         cards:[
             {
-                type:"Text",
-                Title:"Private Tutor",
-                subTitle:"January 2020 - Present",
-                imgSrc:null,
-                imgAlt:null,
-                paragraph:["I have been tutoring privately for about 2 years. I mainly tutor high school IT but I can also offer tutoring for University level Computer Science courses.", "\nIf you are interested in receiving tutoring from me please get in contact"]
+                type:"Picture",
+                Title:"Rondebosch Boys' High School",
+                subTitle:"April 2016 - November 2018",
+                imgSrc:"../images/About/RBHS.png",
+                imgAlt:"RBHS Logo",
+                paragraph:[""]
             },
             {
-                type:"Text",
-                Title:"Computer Science Tutor - CSC1015F",
-                subTitle:"February 2020 - June 2020",
+                type:"Picture",
+                Title:"King Edward VII School",
+                subTitle:"February 2013 - March 2016",
+                imgSrc:"../images/About/KES.png",
+                imgAlt:"KES Logo",
+                paragraph:["",]
+            },
+            {
+                type:"Picture",
+                Title:"Grey College",
+                subTitle:"February 2009 - November 2012",
+                imgSrc:"../images/About/Grey.png",
+                imgAlt:"Grey College Logo",
+                paragraph:[""]
+            },
+            {
+                type:"Empty",
+                Title:"",
+                subTitle:"",
                 imgSrc:null,
                 imgAlt:null,
-                paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",]
+                paragraph:[""]
+            },
+            {
+                type:"Picture",
+                Title:"University Of Cape Town",
+                subTitle:"February 2019 - Present",
+                imgSrc:"../images/About/UCT.png",
+                imgAlt:"UCT Logo",
+                paragraph:[""]
+            },
+            {
+                type:"Empty",
+                Title:"",
+                subTitle:"",
+                imgSrc:null,
+                imgAlt:null,
+                paragraph:[""]
             },
         ]
     },

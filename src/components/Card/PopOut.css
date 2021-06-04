@@ -12,16 +12,38 @@
     flex-basis: 100%;
 }
 
-.popRight{
+.startLeft.popRight{
     margin-left: -2rem;
     padding-left: 4rem;
     margin-right: -5rem;
     padding-right: 7rem;
 }
 
-.popLeft{
+.startLeft.popLeft{
     margin-right: 2rem;
     padding-right: 4rem;
     margin-left: -9rem;
     padding-left: 7rem;
+}
+
+.startRight.popRight{
+    margin-left: 2rem;
+    padding-left: 4rem;
+    margin-right: -9rem;
+    padding-right: 7rem;
+}
+
+.startRight.popLeft{
+    margin-right: -2rem;
+    padding-right: 4rem;
+    margin-left: -5rem;
+    padding-left: 7rem;
+}
+
+@media only screen and (width<768px) {
+    .PopOut{
+        flex-direction: column;
+        padding: 4rem;
+        gap: 6rem;
+    }
 }

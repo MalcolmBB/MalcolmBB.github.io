@@ -6,7 +6,15 @@ import {StylesProvider} from '@material-ui/core/styles';
 import "./Button.css"
 
 
-function Button({type, className, linkTo, value, linePos, onClick}){
+function Button({type, className, linkTo, value, linePos, onClick = () => {
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+    document.activeElement.blur();
+}
+}){
     if (linePos != null){
         className += " " + linePos;
     }
@@ -22,8 +30,8 @@ function Button({type, className, linkTo, value, linePos, onClick}){
         }
     }
     else if (type === "Navigation"){
-        if (value === ""){return navButtonEmpty({className, linkTo, linePos});}
-        return navButton({className, linkTo, value, linePos});
+        if (value === ""){return navButtonEmpty({className, linkTo, linePos, onClick});}
+        return navButton({className, linkTo, value, linePos, onClick});
     }
     else if (type === "Submit"){
         return submitButton({className, value, linePos, onClick});
@@ -47,19 +55,12 @@ function submitButton({className, value, linePos, onClick}){
     );
 }
 
-function navButton({className, linkTo, value, linePos}){
+function navButton({className, linkTo, value, linePos, onClick}){
     return (
         <StylesProvider injectFirst>
             <MaterialButton
                 className={className}
-                onClick={() => {
-                    window.scroll({
-                        top: 0,
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                    document.activeElement.blur();
-                }}
+                onClick={onClick}
                 component={Link}
                 to={linkTo}
                 disableFocusRipple={true}
@@ -73,19 +74,12 @@ function navButton({className, linkTo, value, linePos}){
     );
 }
 
-function navButtonEmpty({className, linkTo, linePos}){
+function navButtonEmpty({className, linkTo, linePos, onClick}){
     return (
         <StylesProvider injectFirst>
             <MaterialButton
                 className={className}
-                onClick={() => {
-                    window.scroll({
-                        top: 0,
-                        left: 0,
-                        behavior: 'smooth'
-                    });
-                    document.activeElement.blur();
-                }}
+                onClick={onClick}
                 component={Link}
                 to={linkTo}
                 disableFocusRipple={true}

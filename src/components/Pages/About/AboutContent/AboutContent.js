@@ -5,17 +5,23 @@ import {Slide} from 'react-awesome-reveal';
 import "./AboutContent.css"
 
 var dir;
+var shift = 0;
 var threeCards = [];
 var temp = [];
+var startSide;
 
 function AboutContent({type="Text", sideKey=0, Title="Placeholder", imgSrc, imgAlt, paragraph="-EmptyThingy-", cards, classes="aboutContentExterior", buttonClassName, buttonLinkTo, buttonValue, buttonType}) {
     if (sideKey % 2 === 0){
         classes += " Left";
+        startSide = "startLeft";
         dir = "left";
+        shift = 0;
     }
     else{
         classes += " Right";
+        startSide = "startRight";
         dir = "right";
+        shift = 1;
     }
     if (type === "Text"){
         return(
@@ -44,6 +50,7 @@ function AboutContent({type="Text", sideKey=0, Title="Placeholder", imgSrc, imgA
     }
     else if (type === "Button"){
         classes = "MainAbout";
+        dir="left";
         return(
             <Slide
                 triggerOnce
@@ -72,7 +79,9 @@ function AboutContent({type="Text", sideKey=0, Title="Placeholder", imgSrc, imgA
                 triggerOnce
                 duration={1000}
                 direction={dir}
-                fraction={0.2}
+                cascade
+                damping={1}
+                fraction={0.05}
                 >
                 {cardsAboutContent({
                 Title,
@@ -168,7 +177,7 @@ function cardsAboutContent({Title, paragraph, classes, cards}){
             <div className={classes}>
                 <h2>{Title}</h2>
                 {threeCards.map((card, key) => (
-                    <PopOut cards={card} sideKey={key}></PopOut>
+                    <PopOut cards={card} sideKey={key + shift} startSide={startSide}></PopOut>
                 ))}
             </div>
         );
@@ -177,8 +186,8 @@ function cardsAboutContent({Title, paragraph, classes, cards}){
         <div className={classes}>
             <h2>{Title}</h2>
                 <div>
-                    {paragraph.map((par) => (
-                    <p style={{whiteSpace:"pre-line",}}>
+                    {paragraph.map((par, key) => (
+                    <p key={key} style={{whiteSpace:"pre-line",}}>
                         {par}
                     </p>
                     ))}
@@ -186,7 +195,7 @@ function cardsAboutContent({Title, paragraph, classes, cards}){
                 <br></br>
                 <br></br>
             {threeCards.map((card, key) => (
-                <PopOut cards={card} sideKey={key}></PopOut>
+                <PopOut key={key} cards={card} sideKey={key + shift} startSide={startSide}></PopOut>
             ))}
         </div>
     );
