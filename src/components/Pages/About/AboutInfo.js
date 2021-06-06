@@ -4,7 +4,7 @@ const AboutInfo =[
         Title:"Who am I?",
         imgSrc:null,
         imgAlt:null,
-        paragraph:["I am 20 years old and I currently reside in Cape Town, South Africa. I am no stranger to moving to new areas though. Throughout my 20 years I have moved all around South Africa and have learned an extensive amount about the difference in people and cultures in different cities. I am orginally from De Aar, which is a small town in the Northern Cape. I was born in De Aar on the 1st of November 2000 and have since moved to Bloemfontein, Johannesburg and now Cape Town.", "\nAlthough moving this much was not the most enjoyable experience as a child, it did teach me to adapt to new environments very quickly and I also met a lot of interesting people along the way. I had to learn from a very young age how to socialise with new people and gain their respect. Because of these experiences, I can now easily and comfortable network with new people and find common interest and potentially gain a business contact"],
+        paragraph:["I am 20 years old and I currently reside in Cape Town, South Africa. I am no stranger to moving to new areas though. Throughout my 20 years I have moved all around South Africa and have learned an extensive amount about the difference in people and cultures in different cities. I am orginally from De Aar, which is a small town in the Northern Cape. I was born in De Aar on the 1st of November 2000 and have since moved to Bloemfontein, Johannesburg and now Cape Town.", "\nAlthough moving this much was not the most enjoyable experience as a child, it did teach me to adapt to new environments very quickly and I also met a lot of interesting people along the way. I had to learn from a very young age how to socialise with new people and gain their respect. Because of these experiences, I can now easily and comfortably network with new people and find common interest and potentially gain a business contact"],
     },
     {
         type:"Card",
@@ -49,7 +49,7 @@ const AboutInfo =[
                 subTitle:"February 2019 - Present",
                 imgSrc:"../images/About/UCT.png",
                 imgAlt:"UCT Logo",
-                paragraph:[""]
+                paragraph:["Bachelors of Science in Computer Science and Computer Engineering"]
             },
             {
                 type:"Empty",
@@ -64,15 +64,23 @@ const AboutInfo =[
     {
         type:"Card",
         Title:"Experience",
-        paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."],
+        paragraph:["Although I am currently a full time student, I have been apointed in some capacities to perform various tasks."],
         cards:[
+            {
+                type:"Text",
+                Title:"Freelance web developer",
+                subTitle:"April 2021 - Present",
+                imgSrc:null,
+                imgAlt:null,
+                paragraph:["I gained an interest in web development in the second quarter of 2021 and started my journey to educate and expand my knowledge set in this field.","\nThis portfolio website is my first official website and other projects are currently being worked on."]
+            },
             {
                 type:"Text",
                 Title:"Private Tutor",
                 subTitle:"January 2020 - Present",
                 imgSrc:null,
                 imgAlt:null,
-                paragraph:["I have been tutoring privately for about 2 years. I mainly tutor high school IT but I can also offer tutoring for University level Computer Science courses.", "\nIf you are interested in receiving tutoring from me please get in contact"]
+                paragraph:["I have been tutoring privately for about 2 years. I mainly tutor high school IT but I can also offer tutoring for University level Computer Science courses.", "\nIf you are interested in receiving tutoring from me please get in contact."]
             },
             {
                 type:"Text",
@@ -80,7 +88,7 @@ const AboutInfo =[
                 subTitle:"February 2020 - June 2020",
                 imgSrc:null,
                 imgAlt:null,
-                paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",]
+                paragraph:["Appointed as a tutor for first year Computer Science at The University of Cape Town.","\nThis role involved weekly tutorial sessions with a group of students as well as invigilating test. I was also tasked to mark assignments and tests.","When the University moved to an online learning platform because of the Covid-19 pandemic, I provided daily online assistance to students.",]
             },
             {
                 type:"Text",
@@ -88,42 +96,102 @@ const AboutInfo =[
                 subTitle:"July 2020 - November 2020",
                 imgSrc:null,
                 imgAlt:null,
-                paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",]
+                paragraph:["After the completion of the first semester course(CSC1015F), I was offered a position to tutor the second semester course as well.", "\nMost of the duties remained the same however as the University was on a fully online learning platform, no weekly tutorials were held. Daily assistance was still provided to students.",]
+            },
+        ]
+    },
+    {
+        type:"Card",
+        Title:"Skillset",
+        paragraph:["I have experimented with many different programming languages and although I do not consider myself an expert in all of them, I do have substantial knowledge and experience with each of them."],
+        cards:[
+            {
+                type:"Picture",
+                Title:"Java",
+                subTitle:"Intermediate",
+                imgSrc:"../images/About/Java.png",
+                imgAlt:"Java Logo",
+                paragraph:[""]
             },
             {
-                type:"Text",
-                Title:"Other things",
-                imgSrc:null,
-                imgAlt:null,
-                paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",]
+                type:"Picture",
+                Title:"Python",
+                subTitle:"Intermediate",
+                imgSrc:"../images/About/Python.png",
+                imgAlt:"Python Logo",
+                paragraph:[""]
             },
             {
-                type:"Text",
-                Title:"Other things",
-                imgSrc:null,
-                imgAlt:null,
-                paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",]
+                type:"Picture",
+                Title:"C++",
+                subTitle:"Intermediate",
+                imgSrc:"../images/About/C++.png",
+                imgAlt:"C++ Logo",
+                paragraph:[""]
             },
             {
-                type:"Text",
-                Title:"Other things",
-                imgSrc:null,
-                imgAlt:null,
-                paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",]
+                type:"Picture",
+                Title:"Pascal - Delphi",
+                subTitle:"Intermediate",
+                imgSrc:"../images/About/Delphi.png",
+                imgAlt:"Delphi Logo",
+                paragraph:[""]
             },
             {
-                type:"Text",
-                Title:"Other things",
-                imgSrc:null,
-                imgAlt:null,
-                paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",]
+                type:"Picture",
+                Title:"JavaScript",
+                subTitle:"Proficient",
+                imgSrc:"../images/About/JS.png",
+                imgAlt:"JavaScript Logo",
+                paragraph:[""]
             },
             {
-                type:"Text",
-                Title:"Other things",
-                imgSrc:null,
-                imgAlt:null,
-                paragraph:["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",]
+                type:"Picture",
+                Title:"HTML",
+                subTitle:"Proficient",
+                imgSrc:"../images/About/HTML.png",
+                imgAlt:"HTML Logo",
+                paragraph:[""]
+            },
+            {
+                type:"Picture",
+                Title:"CSS",
+                subTitle:"Proficient",
+                imgSrc:"../images/About/CSS.png",
+                imgAlt:"CSS Logo",
+                paragraph:[""]
+            },
+            {
+                type:"Picture",
+                Title:"React - library",
+                subTitle:"Proficient",
+                imgSrc:"../images/About/React.png",
+                imgAlt:"React Logo",
+                paragraph:[""]
+            },
+            {
+                type:"Picture",
+                Title:"SQL",
+                subTitle:"Proficient",
+                imgSrc:"../images/About/SQL.png",
+                imgAlt:"SQL Logo",
+                paragraph:[""]
+            },
+            {
+                type:"Empty",
+                paragraph:[""]
+            },
+            {
+                type:"Picture",
+                Title:"C",
+                subTitle:"Proficient",
+                imgSrc:"../images/About/C.png",
+                imgAlt:"C Logo",
+                paragraph:[""]
+            },
+            {
+                type:"Empty",
+                paragraph:[""]
             },
         ]
     },

@@ -8,7 +8,7 @@ var animDirection;
 function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card", animKey}){
     animDirection = "down";
 
-    if (useMediaQuery('only screen and (width<768px)')){
+    if (useMediaQuery('(width<768px)')){
         if (Math.random() < 0.5){
             animDirection = "right";
         }
@@ -17,7 +17,7 @@ function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card
         }
     }
     if (type === "Picture"){
-        classes += " Picture"
+        classes += " Picture";
         return (
             <Slide
                 triggerOnce
@@ -31,8 +31,8 @@ function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card
                     <h4>{subTitle}</h4>
                     <img src={imgSrc} alt={imgAlt}/>
                     <div>
-                        {paragraph.map((par) => (
-                        <p style={{whiteSpace:"pre-line",}}>
+                        {paragraph.map((par, key) => (
+                        <p key={key} style={{whiteSpace:"pre-line",}}>
                             {par}
                         </p>
                         ))}
@@ -55,8 +55,8 @@ function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card
                     <h3>{Title}</h3>
                     <h4>{subTitle}</h4>
                         <div>
-                            {paragraph.map((par) => (
-                            <p style={{whiteSpace:"pre-line",}}>
+                            {paragraph.map((par, key) => (
+                            <p key={key} style={{whiteSpace:"pre-line",}}>
                                 {par}
                             </p>
                             ))}
@@ -77,8 +77,8 @@ function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card
                 <h3>{Title}</h3>
                 <h4>{subTitle}</h4>
                     <div>
-                        {paragraph.map((par) => (
-                        <p style={{whiteSpace:"pre-line",}}>
+                        {paragraph.map((par, key) => (
+                        <p key={key} style={{whiteSpace:"pre-line",}}>
                             {par}
                         </p>
                         ))}

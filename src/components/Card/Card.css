@@ -21,7 +21,7 @@
 }
 
 .Picture > img{
-    width: 50%;
+    max-width: 50%;
     align-self: center;
     margin-bottom: 1rem;
 }

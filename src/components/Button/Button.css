@@ -21,6 +21,9 @@
     color: var(--pDark);
     background: transparent;
     border-radius: .25rem;
+    -webkit-transition: color;
+    -o-transition: color;
+    transition: color;
 }
 
 .header.button{
@@ -82,6 +85,8 @@
 
 .button *{
     z-index: 3;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -121,9 +126,11 @@
 .button:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 100%;
     background: var(--pDark);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     z-index: 2;
 }
