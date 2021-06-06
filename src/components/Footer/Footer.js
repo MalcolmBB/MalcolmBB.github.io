@@ -71,11 +71,11 @@ function Footer(){
                         ></Button>
                     ))}
                 </div>
-                <a className="ThanksTag">Made with ♥ by Me</a>
+                <p className="ThanksTag">Made with ♥ by Me</p>
                 <div className="legalities">
                     <a className="PrivacyPolicy" target="_self" href="#/Privacy-Policy">Privacy Policy</a>
 
-                    <a className="Copyright">© 2021 Malcolm Baatjies. All rights reserved</a>
+                    <p className="Copyright">© 2021 Malcolm Baatjies. All rights reserved</p>
 
                     <a className="SiteMap" href="https://www.xml-sitemaps.com/">Sitemap</a>
                 </div>
