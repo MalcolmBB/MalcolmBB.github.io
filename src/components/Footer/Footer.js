@@ -77,7 +77,7 @@ function Footer(){
 
                     <p className="Copyright">© 2021 Malcolm Baatjies. All rights reserved</p>
 
-                    <a className="SiteMap" href="https://www.xml-sitemaps.com/">Sitemap</a>
+                    <a className="SiteMap" href="https://malcolmbaatjies.me/sitemap">Sitemap</a>
                 </div>
         </footer>
     );

@@ -52,11 +52,13 @@ class Home extends React.Component {
                                                     type="mainWork"
                                                     sideKey={key}
                                                     Title={wl.Title}
+                                                    Subtitle={wl.Subtitle}
                                                     imgSrc={wl.imgSrc}
                                                     imgAlt={wl.imgAlt}
                                                     paragraph={wl.paragraph}
                                                     buttonClassName={wl.buttonClassName}
                                                     buttonLinkTo={wl.buttonLinkTo}
+                                                    buttonValue={wl.buttonValue}
                                                 ></WorkContainer>
                                             ))}
                                         <Button
