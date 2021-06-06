@@ -4,14 +4,12 @@ import {Button as MaterialButton} from '@material-ui/core';
 import {SocialIcon} from 'react-social-icons';
 import {StylesProvider} from '@material-ui/core/styles';
 import "./Button.css"
+import $ from 'jquery';
+
 
 
 function Button({type, className, linkTo, value, linePos, onClick = () => {
-    window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    });
+    $('.simplebar-content-wrapper')[0].scroll({top: 0, left: 0, behavior: 'smooth'})
     document.activeElement.blur();
 }
 }){

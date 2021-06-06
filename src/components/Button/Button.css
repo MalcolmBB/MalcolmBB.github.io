@@ -21,8 +21,6 @@
     color: var(--pDark);
     background: transparent;
     border-radius: .25rem;
-    -webkit-transition: color;
-    -o-transition: color;
     transition: color;
 }
 
@@ -85,26 +83,22 @@
 
 .button *{
     z-index: 3;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
     transition: .5s;
 }
 
-.button:hover, .button:focus > span{
-    color: var(--light);
+.button > span{
+    -webkit-transition: 0s;
 }
 
 .button:hover, .button:focus {
     --iconColor: var(--light);
     background: transparent;
-}
-
-.invert:hover, .invert:focus > span{
-    color: var(--pDark);
+    color: var(--light);
 }
 
 .invert:hover, .invert:focus {
     --iconColor: var(--pDark);
+    color: var(--pDark);
 }
 
 .leftLine.button:hover:before, .leftLine.button:focus:before, .leftLine.invert:hover:before, .leftLine.invert:focus:before{
@@ -129,8 +123,6 @@
     width: 110%;
     height: 100%;
     background: var(--pDark);
-    -webkit-transition: .5s;
-    -o-transition: .5s;
     transition: .5s;
     z-index: 2;
 }
@@ -163,7 +155,6 @@
     color: var(--pDark);
     margin: 0;
     padding: 0;
-    margin-right: 10vw;
     cursor: pointer;
     border: none;
     background: transparent;

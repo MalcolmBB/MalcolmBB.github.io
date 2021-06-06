@@ -116,11 +116,25 @@ header {
     }
 
     .showMenu + .headerButtons {
-        animation: menuShow 1.5s ease forwards;
+        -webkit-animation: menuShow 1.5s ease forwards;
+                animation: menuShow 1.5s ease forwards;
     }
 
     .hideMenu + .headerButtons {
-        animation: menuHide 1.5s ease forwards;
+        -webkit-animation: menuHide 1.5s ease forwards;
+                animation: menuHide 1.5s ease forwards;
+    }
+
+    @-webkit-keyframes menuShow {
+        from {
+            left: 100%;
+            width:0;
+        }
+
+        to {
+            left: 0;
+            width:100%;
+        }
     }
 
     @keyframes menuShow {
@@ -132,6 +146,18 @@ header {
         to {
             left: 0;
             width:100%;
+        }
+    }
+
+    @-webkit-keyframes menuHide {
+        from {
+            left: 0;
+            width:100%;
+        }
+
+        to {
+            left: 100%;
+            width:0;
         }
     }
 

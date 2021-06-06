@@ -9,6 +9,7 @@ function WorkContainer({
     type,
     sideKey,
     Title,
+    Subtitle,
     imgSrc,
     imgAlt,
     paragraph,
@@ -45,6 +46,7 @@ function WorkContainer({
             >
             {Work({
                 Title,
+                Subtitle,
                 imgSrc,
                 imgAlt,
                 paragraph,
@@ -59,6 +61,7 @@ function WorkContainer({
 
 function Work({
     Title,
+    Subtitle,
     imgSrc,
     imgAlt,
     paragraph,
@@ -70,10 +73,17 @@ function Work({
 }) {
     return (<div className={classes}>
         <h2>{Title}</h2>
+        <h4>{Subtitle}</h4>
         <div className="ContentContainer">
             <img src={imgSrc} alt={imgAlt}/>
             <div className="SummaryContainer">
-                <p>{paragraph}</p>
+                <div>
+                    {paragraph.map((par, key) => (
+                        <p key={key} style={{whiteSpace:"pre-line",}}>
+                            {par}
+                        </p>
+                    ))}
+                </div>
                 <Button type={buttonType} className={buttonClassName} linkTo={buttonLinkTo} value={buttonValue}></Button>
             </div>
         </div>

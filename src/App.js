@@ -8,6 +8,7 @@ import Home from './components/Pages/Home/Home';
 import About from './components/Pages/About/About';
 import PastWork from "./components/Pages/PastWork/PastWork";
 import ContactMe from "./components/Pages/ContactMe/ContactMe";
+import PrivacyPolicy from "./components/Pages/PrivacyPolicy/PrivacyPolicy";
 import ScrollToTop from "./scrollToTop";
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
                         <Route path= "/About" exact component={About}/>
                         <Route path= "/Past-work" exact component={PastWork}/>
                         <Route path= "/Contact-me" exact component={ContactMe}/>
+                        <Route path= "/Privacy-Policy" exact component={PrivacyPolicy}/>
                     </Switch>
                 </React.Fragment>
             </Router>

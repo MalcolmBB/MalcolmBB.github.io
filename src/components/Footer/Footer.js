@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button';
 import './Footer.css';
+import $ from 'jquery';
 
 const pathStyle = {
     whitespace: "pre",
@@ -42,20 +43,14 @@ function Footer(){
                     <div className="LogoContainer" tabIndex="0"
                         onKeyPress={(event) => {
                             if (event.key === 'Enter'){
-                                window.scroll({
-                                    top: 0,
-                                    left: 0,
-                                    behavior: 'smooth'
-                                });
+                                $('.simplebar-content-wrapper')[0].scroll({top: 0, left: 0, behavior: 'smooth'})
+                                document.activeElement.blur();
                             }
                         }}
 
                         onClick={() => {
-                        window.scroll({
-                            top: 0,
-                            left: 0,
-                            behavior: 'smooth'
-                        });
+                            $('.simplebar-content-wrapper')[0].scroll({top: 0, left: 0, behavior: 'smooth'})
+                            document.activeElement.blur();
                     }}>
                         <svg viewBox="22.453 23.542 466.549 464.915" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="257.089" cy="255.455" r="229.734" transform="matrix(1.015411, 0, 0, 1.011855, -5.323695, -2.483635)"/>
@@ -76,8 +71,11 @@ function Footer(){
                         ></Button>
                     ))}
                 </div>
+                <a className="ThanksTag">Made with ♥ by Me</a>
                 <div className="legalities">
-                    <a className="PrivacyPolicy" href="https://www.freeprivacypolicy.com/live/ca89b9c8-e4ba-48a1-bf36-bc25098de305">Privacy Policy</a>
+                    <a className="PrivacyPolicy" target="_self" href="#/Privacy-Policy">Privacy Policy</a>
+
+                    <a className="Copyright">© 2021 Malcolm Baatjies. All rights reserved</a>
 
                     <a className="SiteMap" href="https://www.xml-sitemaps.com/">Sitemap</a>
                 </div>

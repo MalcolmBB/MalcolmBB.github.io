@@ -17,6 +17,7 @@
     text-align: center;
 }
 
+
 @media only screen and (width<768px) {
     .mainContainer{
         margin-top: 10rem;

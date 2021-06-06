@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Button from '../Button/Button.js';
+import $ from 'jquery';
 import './Header.css'
 
 const headerButtonsList = [
@@ -40,11 +41,7 @@ function Header(){
 
     const clickThing = () => {
         setOpened(false);
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
+        $('.simplebar-content-wrapper')[0].scroll({top: 0, left: 0, behavior: 'smooth'})
         document.activeElement.blur();
     };
 

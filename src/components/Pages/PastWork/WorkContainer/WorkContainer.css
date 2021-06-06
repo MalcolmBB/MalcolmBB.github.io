@@ -20,6 +20,13 @@
 
 .ExteriorContainer > h2 {
     font-size: 1.8rem;
+    margin-bottom: .2rem;
+}
+
+.ExteriorContainer > h4 {
+    font-size: 1rem;
+    color: var(--pLight);
+    font-weight: normal;
     margin-bottom: 1rem;
 }
 
@@ -87,6 +94,11 @@
 
     .ExteriorContainer > h2 {
         font-size: 6rem;
+        margin-bottom: .2rem;
+    }
+
+    .ExteriorContainer > h4 {
+        font-size: 4rem;
         margin-bottom: 1rem;
     }
 

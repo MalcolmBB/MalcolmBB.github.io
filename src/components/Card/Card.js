@@ -4,17 +4,19 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import './Card.css';
 
 var animDirection;
+var animFrac;
 
 function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card", animKey}){
     animDirection = "down";
-
-    if (useMediaQuery('(width<768px)')){
+    animFrac = 0.8;
+    if (useMediaQuery('only screen and (max-width:768px)')){
         if (Math.random() < 0.5){
             animDirection = "right";
         }
         else{
             animDirection = "left";
         }
+        animFrac=0.4;
     }
     if (type === "Picture"){
         classes += " Picture";
@@ -24,7 +26,7 @@ function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card
                 duration={1200}
                 delay={350}
                 direction={animDirection}
-                fraction={0.8}
+                fraction={animFrac}
                 >
                 <div className={classes}>
                     <h3>{Title}</h3>
@@ -49,7 +51,7 @@ function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card
                 duration={1200}
                 delay={350}
                 direction={animDirection}
-                fraction={0.8}
+                fraction={animFrac}
                 >
                 <div className={classes}>
                     <h3>{Title}</h3>
@@ -71,7 +73,7 @@ function Card({type, Title, subTitle, imgSrc, imgAlt, paragraph, classes = "Card
             duration={1200}
             delay={350}
             direction={animDirection}
-            fraction={0.8}
+            fraction={animFrac}
             >
             <div className={classes}>
                 <h3>{Title}</h3>

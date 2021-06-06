@@ -5,6 +5,8 @@ import TextField from  '@material-ui/core/TextField';
 import Button from '../../Button/Button';
 import "./ContactMe.css";
 import * as emailjs from 'emailjs-com';
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css';
 
 var validator = require("email-validator");
 const nameErrorConst = "Please enter your full name";
@@ -99,86 +101,88 @@ class ContactMe extends React.Component {
     render(){
         return (
             <div>
-                <Header></Header>
-                <div className="mainContactContainer">
-                    <div className="contactContainer">
-                        <h2 className="contactHeader">Please enter your details and message below</h2>
-                        <form onSubmit={this.handleSubmit}>
+                <SimpleBar style={{ height: '100vh'}} forceVisible="y" autoHide={false}>
+                    <Header></Header>
+                    <div className="mainContactContainer">
+                        <div className="contactContainer">
+                            <h2 className="contactHeader">Please enter your details and message below</h2>
+                            <form onSubmit={this.handleSubmit}>
+                                <TextField
+                                    inputProps={{style:{fontSize:"var(--inputFontSize)"}}}
+                                    InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
+                                    inputRef={nameField => (this.nameField = nameField)}
+                                    value={this.state.defaultName}
+                                    label="Full Name"
+                                    fullWidth
+                                    autoComplete="none"
+                                    onChange={(e) => {
+                                        if (e.target.value === ""){
+                                            this.setState({name:e.target.value, nameError:nameErrorConst, defaultName:e.target.value})
+                                        }
+                                        else{
+                                            this.setState({name:e.target.value, defaultName:e.target.value, nameError:""})
+                                        }
+                                    }}
+                                    error={this.state.name === ""}
+                                    helperText={this.state.nameError}
+                                />
                             <TextField
                                 inputProps={{style:{fontSize:"var(--inputFontSize)"}}}
                                 InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
-                                inputRef={nameField => (this.nameField = nameField)}
-                                value={this.state.defaultName}
-                                label="Full Name"
+                                inputRef={emailField => (this.emailField = emailField)}
+                                type={"email"}
+                                value={this.state.defaultEmail}
+                                label="Email"
                                 fullWidth
                                 autoComplete="none"
                                 onChange={(e) => {
-                                    if (e.target.value === ""){
-                                        this.setState({name:e.target.value, nameError:nameErrorConst, defaultName:e.target.value})
+                                    this.setState({defaultEmail:e.target.value})
+                                }}
+                                onBlur={(e) => {
+                                    if (!validator.validate(e.target.value)){
+                                        this.setState({email:e.target.value, emailError:emailErrorConst, defaultEmail:e.target.value})
                                     }
                                     else{
-                                        this.setState({name:e.target.value, defaultName:e.target.value, nameError:""})
+                                        this.setState({email:e.target.value, defaultEmail:e.target.value, emailError:""})
                                     }
                                 }}
-                                error={this.state.name === ""}
-                                helperText={this.state.nameError}
-                            />
-                        <TextField
-                            inputProps={{style:{fontSize:"var(--inputFontSize)"}}}
-                            InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
-                            inputRef={emailField => (this.emailField = emailField)}
-                            type={"email"}
-                            value={this.state.defaultEmail}
-                            label="Email"
-                            fullWidth
-                            autoComplete="none"
-                            onChange={(e) => {
-                                this.setState({defaultEmail:e.target.value})
-                            }}
-                            onBlur={(e) => {
-                                if (!validator.validate(e.target.value)){
-                                    this.setState({email:e.target.value, emailError:emailErrorConst, defaultEmail:e.target.value})
-                                }
-                                else{
-                                    this.setState({email:e.target.value, defaultEmail:e.target.value, emailError:""})
-                                }
-                            }}
-                            error={!validator.validate(this.state.email)}
-                            helperText={this.state.emailError}
-                            />
-                        <TextField
-                            inputProps={{style:{fontSize:"var(--inputFontSize)", lineHeight:"var(--inputFontSize)"}}}
-                            InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
-                            inputRef={messageField => (this.messageField = messageField)}
-                            className="messageField"
-                            value={this.state.defaultMessage}
-                            label="Message"
-                            spellCheck
-                            fullWidth
-                            multiline
-                            rows={8}
-                            autoComplete="none"
-                            onChange={(e) => {
-                                if (e.target.value === ""){
-                                    this.setState({message:e.target.value, messageError:messageErrorConst, defaultMessage:e.target.value})
-                                }
-                                else{
-                                    this.setState({message:e.target.value, defaultMessage:e.target.value, messageError:""})
-                                }
-                            }}
-                            error={this.state.message === ""}
-                            helperText={this.state.messageError}
-                            />
-                        <Button
-                            type="Submit"
-                            className="button bSubmit"
-                            value="Submit"
-                            onClick={this.handleSubmit}
-                        ></Button>
-                        </form>
+                                error={!validator.validate(this.state.email)}
+                                helperText={this.state.emailError}
+                                />
+                            <TextField
+                                inputProps={{style:{fontSize:"var(--inputFontSize)", lineHeight:"var(--inputFontSize)"}}}
+                                InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
+                                inputRef={messageField => (this.messageField = messageField)}
+                                className="messageField"
+                                value={this.state.defaultMessage}
+                                label="Message"
+                                spellCheck
+                                fullWidth
+                                multiline
+                                rows={8}
+                                autoComplete="none"
+                                onChange={(e) => {
+                                    if (e.target.value === ""){
+                                        this.setState({message:e.target.value, messageError:messageErrorConst, defaultMessage:e.target.value})
+                                    }
+                                    else{
+                                        this.setState({message:e.target.value, defaultMessage:e.target.value, messageError:""})
+                                    }
+                                }}
+                                error={this.state.message === ""}
+                                helperText={this.state.messageError}
+                                />
+                            <Button
+                                type="Submit"
+                                className="button bSubmit"
+                                value="Submit"
+                                onClick={this.handleSubmit}
+                            ></Button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                <Footer></Footer>
+                    <Footer></Footer>
+                </SimpleBar>
             </div>
         );
     }

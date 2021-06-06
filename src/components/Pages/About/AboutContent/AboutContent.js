@@ -99,8 +99,8 @@ function defaultTextOnlyAboutContent({Title, paragraph, classes}){
         <div className={classes}>
             <h2>{Title}</h2>
             <div>
-                {paragraph.map((par) => (
-                    <p style={{whiteSpace:"pre-line",}}>
+                {paragraph.map((par, key) => (
+                    <p key={key} style={{whiteSpace:"pre-line",}}>
                         {par}
                     </p>
                 ))}
@@ -126,8 +126,8 @@ function buttonAboutContent({
             <img src={imgSrc} alt={imgAlt}/>
             <div className="SummaryContainer">
                 <div>
-                    {paragraph.map((par) => (
-                    <p style={{whiteSpace:"pre-line",}}>
+                    {paragraph.map((par, key) => (
+                    <p key={key} style={{whiteSpace:"pre-line",}}>
                         {par}
                     </p>
                     ))}
@@ -145,7 +145,11 @@ function defaultPictureAboutContent({Title, paragraph, imgSrc, imgAlt, classes})
                 <h2>{Title}</h2>
                 <div>
                     <img src={imgSrc} alt={imgAlt}/>
-                    <p>{paragraph}</p>
+                        {paragraph.map((par, key) => (
+                            <p key={key} style={{whiteSpace:"pre-line",}}>
+                                {par}
+                            </p>
+                        ))}
                 </div>
             </div>
         );
@@ -155,7 +159,11 @@ function defaultPictureAboutContent({Title, paragraph, imgSrc, imgAlt, classes})
             <div className={classes}>
                 <h2>{Title}</h2>
                 <div>
-                    <p>{paragraph}</p>
+                    {paragraph.map((par, key) => (
+                        <p key={key} style={{whiteSpace:"pre-line",}}>
+                            {par}
+                        </p>
+                    ))}
                     <img src={imgSrc} alt={imgAlt}/>
                 </div>
             </div>
