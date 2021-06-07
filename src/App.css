@@ -59,6 +59,6 @@ html, body{
 
 @media only screen and (width<768px) {
     html{
-        overflow-y: none;
+        overflow-y: hidden;
     }
 }

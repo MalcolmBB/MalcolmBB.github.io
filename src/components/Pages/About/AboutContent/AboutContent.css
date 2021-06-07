@@ -31,6 +31,8 @@
     width: 25vw;
     height: 25vw;
     margin: 0 2rem;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 5rem -1rem var(--primary);
 }
 
 .MainAbout > .ContentContainer > .SummaryContainer {

@@ -17,7 +17,7 @@ class Home extends React.Component {
 
         arr=[];
 
-        while (arr.length < 3){
+        while (arr.length < Math.min(3, WorkList.length)){
             var r = Math.floor(Math.random() * WorkList.length);
             if (arr.indexOf(r) === -1) arr.push(r);
         }

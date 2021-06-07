@@ -1,9 +1,9 @@
 :root{
     --iconColor: var(--light);
-    --iconSize: 5rem;
-    --textIconSize: 5rem;
-    --textIconMargin: -1rem;
-    --iconMargin: -1rem;
+    --iconSize: 3rem;
+    --textIconSize: 3rem;
+    --textIconMargin: 0rem;
+    --iconMargin: 0rem;
     --lineWidth: .35rem;
 }
 

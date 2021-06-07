@@ -18,15 +18,6 @@ const WorkList = [
         buttonLinkTo:"https://github.com/MalcolmBB",
         buttonValue:"View my github!"
     },
-    {
-        Title:"More projects will be added soon!",
-        imgSrc:"../images/PastWork/Test1.svg",
-        imgAlt:"Project n picture",
-        paragraph:["Stayed tuned for more projects to be uploaded. Unfortunately University is insanely busy at the moment so new content will be added once that calms down.","\nThank you for understanding!"],
-        buttonClassName:"button bProject",
-        buttonLinkTo:"https://github.com/MalcolmBB",
-        buttonValue:"View my github!"
-    },
 ]
 
 

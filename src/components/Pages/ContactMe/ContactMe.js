@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
 import TextField from  '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '../../Button/Button';
 import "./ContactMe.css";
 import * as emailjs from 'emailjs-com';
@@ -25,7 +27,8 @@ class ContactMe extends React.Component {
             messageError:"",
             defaultName: "",
             defaultEmail:"",
-            defaultMessage:""
+            defaultMessage:"",
+            open:false
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -51,6 +54,7 @@ class ContactMe extends React.Component {
                 templateParams,
                 'user_NigdOEjlWhj5f3Jjv5Vw3'
             )
+            this.setState({open:true});
             this.resetForm();
         }
         else {
@@ -96,6 +100,10 @@ class ContactMe extends React.Component {
         defaultEmail:"",
         defaultMessage:""
     });
+
+    setTimeout(() => {
+        this.setState({open:false});
+    }, 1200);
   }
 
     render(){
@@ -110,11 +118,12 @@ class ContactMe extends React.Component {
                                 <TextField
                                     inputProps={{style:{fontSize:"var(--inputFontSize)"}}}
                                     InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
+                                    FormHelperTextProps={{style:{fontSize:"calc(var(--inputFontSize)*0.7)"}}}
                                     inputRef={nameField => (this.nameField = nameField)}
                                     value={this.state.defaultName}
                                     label="Full Name"
                                     fullWidth
-                                    autoComplete="none"
+                                    autoComplete="name"
                                     onChange={(e) => {
                                         if (e.target.value === ""){
                                             this.setState({name:e.target.value, nameError:nameErrorConst, defaultName:e.target.value})
@@ -129,12 +138,13 @@ class ContactMe extends React.Component {
                             <TextField
                                 inputProps={{style:{fontSize:"var(--inputFontSize)"}}}
                                 InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
+                                FormHelperTextProps={{style:{fontSize:"calc(var(--inputFontSize)*0.7)"}}}
                                 inputRef={emailField => (this.emailField = emailField)}
                                 type={"email"}
+                                autoComplete='email'
                                 value={this.state.defaultEmail}
                                 label="Email"
                                 fullWidth
-                                autoComplete="none"
                                 onChange={(e) => {
                                     this.setState({defaultEmail:e.target.value})
                                 }}
@@ -152,6 +162,7 @@ class ContactMe extends React.Component {
                             <TextField
                                 inputProps={{style:{fontSize:"var(--inputFontSize)", lineHeight:"var(--inputFontSize)"}}}
                                 InputLabelProps={{style:{fontSize:"var(--inputFontSize)"}}}
+                                FormHelperTextProps={{style:{fontSize:"calc(var(--inputFontSize)*0.7)"}}}
                                 inputRef={messageField => (this.messageField = messageField)}
                                 className="messageField"
                                 value={this.state.defaultMessage}
@@ -180,6 +191,9 @@ class ContactMe extends React.Component {
                             ></Button>
                             </form>
                         </div>
+                        <Dialog open={this.state.open}>
+                            <DialogTitle className="DialogTitle">Your message has been sent!</DialogTitle>
+                        </Dialog>
                     </div>
                     <Footer></Footer>
                 </SimpleBar>

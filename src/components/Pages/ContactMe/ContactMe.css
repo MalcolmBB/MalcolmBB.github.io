@@ -28,6 +28,10 @@
     margin-top: 1.5vw;
 }
 
+.DialogTitle *{
+    font-size: 1.2rem;
+}
+
 @media only screen and (width<768px) {
     :root{
         --inputFontSize: 5rem;
@@ -42,5 +46,9 @@
     .contactContainer > form > Button{
         font-size: 5rem;
         margin: 4vw;
+    }
+
+    .DialogTitle *{
+        font-size: 5rem;
     }
 }

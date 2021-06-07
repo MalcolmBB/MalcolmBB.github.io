@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Button as MaterialButton} from '@material-ui/core';
-import {SocialIcon} from 'react-social-icons';
+import MyIcon from './MyIcon';
 import {StylesProvider} from '@material-ui/core/styles';
 import "./Button.css"
 import $ from 'jquery';
@@ -83,7 +83,7 @@ function navButtonEmpty({className, linkTo, linePos, onClick}){
                 disableFocusRipple={true}
                 disableRipple={true}
                 >
-                <SocialIcon network="email" tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--iconSize)", height:"var(--iconSize)", padding:0, margin:"var(--iconMargin)"}}/>
+                <MyIcon name="Email" tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--iconSize)", height:"var(--iconSize)", padding:0, margin:"var(--iconMargin)"}}></MyIcon>
             </MaterialButton>
         </StylesProvider>
     );
@@ -101,7 +101,7 @@ function linkButton({className, linkTo, value, linePos}){
                 target="_blank"
                 disableFocusRipple={true}
                 disableRipple={true}
-                endIcon={<SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--textIconSize)", height:"var(--textIconSize)", padding:0, margin:"var(--textIconMargin)"}}/>}
+                endIcon={<MyIcon link={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--textIconSize)", height:"var(--textIconSize)", padding:0, margin:"var(--textIconMargin)"}}></MyIcon>}
                 >
                 <span>
                     &lt;{value}/&gt;
@@ -124,7 +124,7 @@ function linkButtonEmpty({className, linkTo, linePos}){
                 disableFocusRipple={true}
                 disableRipple={true}
                 >
-                <SocialIcon url={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--iconSize)", height:"var(--iconSize)", padding:0, margin:"var(--iconMargin)"}}/>
+                <MyIcon link={linkTo} tabIndex="-1" bgColor="transparent" fgColor="var(--iconColor)" style={{width:"var(--iconSize)", height:"var(--iconSize)", padding:0, margin:"var(--iconMargin)"}}></MyIcon>
             </MaterialButton>
         </StylesProvider>
     );

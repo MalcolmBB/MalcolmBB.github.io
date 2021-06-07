@@ -117,7 +117,7 @@
     }
 
     :root{
-        --textIconSize: 12rem;
-        --textIconMargin: -1.6rem;
+        --textIconSize: 6rem;
+        --textIconMargin: 1rem;
     }
 }

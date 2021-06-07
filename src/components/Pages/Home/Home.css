@@ -22,4 +22,9 @@
     .mainContainer{
         margin-top: 10rem;
     }
+
+    .bPastWorkCont{
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
 }
