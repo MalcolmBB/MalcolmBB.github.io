@@ -31,8 +31,12 @@ header {
     header{
         height: 8vh;
         position: fixed;
-        z-index: 6;
-        top: 0;
+        z-index: 100;
+        top:0;
+    }
+
+    header *{
+        z-index: 80;
     }
 
     .logo>* {

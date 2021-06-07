@@ -57,8 +57,9 @@ html, body{
     display: none!important;
 }
 
-@media only screen and (width<768px) {
+@media only screen and (max-width:768px) {
     html{
-        overflow-y: hidden;
+        top: 0;
+        overflow: hidden;
     }
 }

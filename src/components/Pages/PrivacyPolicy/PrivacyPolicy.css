@@ -34,3 +34,10 @@
 #PrivacyPolicyContainer ul{
     margin-left: 3rem;
 }
+
+@media only screen and (max-width:768px) {
+    #PrivacyPolicyContainer{
+        font-size: 2.5rem;
+        overflow-x: hidden;
+    }
+}
