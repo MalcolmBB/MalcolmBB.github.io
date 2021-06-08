@@ -61,7 +61,7 @@ footer{
     z-index: -1;
 }
 
-.LogoContainer:hover::before{
+.LogoContainer:hover::before, .LogoContainer:focus::before{
     transform: scale(1.1);
 }
 

@@ -9,14 +9,21 @@ const pathStyle = {
     paintorder: "stroke"
 }
 
+var timer = 0;
+
 class LoadingScreen extends React.Component{
+
     componentDidMount() {
-        setTimeout(() => {
+        timer = setTimeout(() => {
             this.props.history.push('/Home')
         }, 7500)
     }
     render() {
-        return <div id="loadingMain">
+        return <div id="loadingMain"
+            onClick={() => {
+                clearTimeout(timer);
+                this.props.history.push('/Home');
+            }}>
             <svg
             id ="loadingName"
             viewBox="556.958 0 1606.684 200" xmlns="http://www.w3.org/2000/svg">

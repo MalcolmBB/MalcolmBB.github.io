@@ -6,7 +6,7 @@ const WorkList = [
         imgAlt:"Project n picture",
         paragraph:["This is the first website that I have every designed and developed by myself. It is also the first time I used the React library and although it was tedious and frustrating at some point, it was also a very enjoyable and knowledgable experience.","\nYou've clearly seen the website already but just incase here is another link to it :)"],
         buttonClassName:"button bProject",
-        buttonLinkTo:"https://malcolmbaatjies.me",
+        buttonLinkTo:"http://bit.ly/MalcolmBaatjiesMe",
         buttonValue:"View Website"
     },
     {

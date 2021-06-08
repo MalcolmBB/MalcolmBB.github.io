@@ -116,8 +116,8 @@ class ContactMe extends React.Component {
         if (this.state.matches){
             return (
                 <div>
+                    <Header></Header>
                     <SimpleBar style={{ height: '100vh'}} forceVisible="y" autoHide={false}>
-                        <Header></Header>
                         <div className="mainContactContainer">
                             <div className="contactContainer">
                                 <h2 className="contactHeader">Please enter your details and message below</h2>

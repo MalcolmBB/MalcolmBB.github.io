@@ -84,6 +84,7 @@
 .button *{
     z-index: 3;
     transition: .5s;
+    -webkit-transition: color .1s;
 }
 
 .button > span{
@@ -164,7 +165,7 @@
     background: transparent;
 }
 
-@media only screen and (width<768px){
+@media only screen and (max-width:768px){
     :root{
         --lineWidth: 1rem;
     }

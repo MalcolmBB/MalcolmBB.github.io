@@ -51,7 +51,7 @@ function Footer(){
                         onClick={() => {
                             $('.simplebar-content-wrapper')[0].scroll({top: 0, left: 0, behavior: 'smooth'})
                             document.activeElement.blur();
-                    }}>
+                        }}>
                         <svg viewBox="22.453 23.542 466.549 464.915" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="257.089" cy="255.455" r="229.734" transform="matrix(1.015411, 0, 0, 1.011855, -5.323695, -2.483635)"/>
                         <path d="M 165.236 295.478 L 165.236 312.19 L 84.487 258.67 L 84.487 245.554 L 165.236 192.034 L 165.236 208.746 L 100.074 251.689 L 100.074 252.535 L 165.236 295.478 Z" style={pathStyle}/>
