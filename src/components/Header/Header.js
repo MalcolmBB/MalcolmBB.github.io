@@ -5,26 +5,26 @@ import './Header.css'
 
 const headerButtonsList = [
     {
-        type: "Navigation",
+        type: "NavigationHeader",
         className: "button bHome header",
         linkTo: "/Home",
         value: "Home"
     },
     {
-        type: "Navigation",
+        type: "NavigationHeader",
         className: "button bAbout header",
         linkTo: "/About",
         value: "About"
     },
     {
-        type: "Navigation",
+        type: "NavigationHeader",
         className: "button bWork header",
         linkTo: "/Past-work",
         value: "Past Work"
     }
     ,
     {
-        type: "Navigation",
+        type: "NavigationHeader",
         className: "button bContact header",
         linkTo: "/Contact-me",
         value: "Contact Me!"

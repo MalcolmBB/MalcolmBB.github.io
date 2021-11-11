@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {HashRouter as Router,
         Route,
-        Switch} from 'react-router-dom';
+        Routes} from 'react-router-dom';
 import './App.css';
 import LoadingScreen from './components/Pages/LoadingScreen/LoadingScreen';
 import Home from './components/Pages/Home/Home';
@@ -17,14 +17,14 @@ class App extends Component {
             <Router basename={"/"}>
                 <ScrollToTop/>
                 <React.Fragment>
-                    <Switch>
-                        <LoadingScreen path= "/" exact component={LoadingScreen}/>
-                        <Route path= "/Home" exact component={Home}/>
-                        <Route path= "/About" exact component={About}/>
-                        <Route path= "/Past-work" exact component={PastWork}/>
-                        <Route path= "/Contact-me" exact component={ContactMe}/>
-                        <Route path= "/Privacy-Policy" exact component={PrivacyPolicy}/>
-                    </Switch>
+                    <Routes>
+                        <Route path= "/" exact element={<LoadingScreen/>}/>
+                        <Route path= "/Home" exact element={<Home/>}/>
+                        <Route path= "/About" exact element={<About/>}/>
+                        <Route path= "/Past-work" exact element={<PastWork/>}/>
+                        <Route path= "/Contact-me" exact element={<ContactMe/>}/>
+                        <Route path= "/Privacy-Policy" exact element={<PrivacyPolicy/>}/>
+                    </Routes>
                 </React.Fragment>
             </Router>
         );

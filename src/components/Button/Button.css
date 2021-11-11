@@ -87,8 +87,17 @@
     -webkit-transition: color .1s;
 }
 
+.activePageButton{
+    z-index: 3;
+    transition: .5s;
+    -webkit-transition: color .1s;
+}
+
 .button > span{
     -webkit-transition: 0s;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .button:hover, .button:focus {
@@ -116,6 +125,28 @@
 
 .bottomLine.button:hover:before, .bottomLine.button:focus:before, .bottomLine.invert:hover:before, .bottomLine.invert:focus:before{
     top:0;
+}
+
+.activePageButton > .button{
+    --iconColor: var(--light);
+    background: transparent;
+    color: var(--light);
+}
+
+.activePageButton > .leftLine.button:before{
+    right: 0;
+}
+
+.activePageButton > .rightLine.button:before{
+    left: 0;
+}
+
+.activePageButton > .bottomLine.button:before{
+    top: 0;
+}
+
+.activePageButton > .topLine.button:before{
+    bottom: 0;
 }
 
 .button:before {

@@ -94,7 +94,7 @@ class ContactMe extends React.Component {
         }
     };
 
-  resetForm() {
+    resetForm() {
     this.setState({
         name: "-1",
         nameError: "",
@@ -110,7 +110,7 @@ class ContactMe extends React.Component {
     setTimeout(() => {
         this.setState({open:false});
     }, 1200);
-  }
+}
 
     render(){
         if (this.state.matches){

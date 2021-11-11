@@ -21,4 +21,4 @@ const WorkList = [
 ]
 
 
-export default WorkList
+export default WorkList;
