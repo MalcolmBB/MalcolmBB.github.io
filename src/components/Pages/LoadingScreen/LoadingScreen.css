@@ -5,9 +5,20 @@
     top: 0;
     left: 0;
     background: var(--dark);
-    animation: showPage 1.8s ease forwards 6s reverse;
     z-index: 9999;
 }
+
+.ClickToSkip{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    font-size: 2rem;
+    color: white;
+    z-index: 99999;
+    animation: showHint 2.4s ease forwards;
+}
+
+
 
 #loadingName{
     width: 60vw;
@@ -18,6 +29,10 @@
     fill: transparent;
     -webkit-animation: fillAnim 1s ease forwards 5s;
             animation: fillAnim 1s ease forwards 5s;
+}
+
+.hideNameDiv{
+    animation: showPage 1.6s ease forwards 6s reverse;
 }
 
 #page{
@@ -216,6 +231,24 @@
 }
 
 @keyframes showPage {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes showHint {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes showHint {
     from{
         opacity: 0;
     }

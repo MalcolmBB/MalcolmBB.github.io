@@ -4,12 +4,12 @@ import Footer from '../../Footer/Footer';
 import Button from '../../Button/Button';
 import WorkContainer from '../PastWork/WorkContainer/WorkContainer';
 import AboutContent from '../About/AboutContent/AboutContent';
-import WorkList from '../PastWork/WorkList';
 import './Home.css';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 
-function Home() {
+function Home(props) {
+    const { WorkList } = props;
 
     const [arr, setArr] = useState([]);
 
@@ -20,8 +20,12 @@ function Home() {
         while (tempArr.length < Math.min(3, WorkList.length)){
             var r = Math.floor(Math.random() * WorkList.length);
             if (tempArr.indexOf(r) === -1) {
-                tempArr.push(WorkList[r]);
+                tempArr.push(r);
             }
+        }
+
+        for (let i = 0; i < tempArr.length; ++i){
+            tempArr[i] = WorkList[tempArr[i]];
         }
 
         setArr(tempArr);

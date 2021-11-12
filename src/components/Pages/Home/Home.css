@@ -17,6 +17,10 @@
     text-align: center;
 }
 
+.bAboutContainer{
+    margin-top: 2rem;
+}
+
 
 @media only screen and (width<768px) {
     .mainContainer{
