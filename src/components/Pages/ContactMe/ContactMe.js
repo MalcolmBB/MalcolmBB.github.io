@@ -54,11 +54,11 @@ function ContactMe() {
               message_html: message,
             };
             emailjs.send(
-                'service_x3cxr0m',
-                'template_7y5fvdu',
-                templateParams,
-                'user_NigdOEjlWhj5f3Jjv5Vw3'
-            )
+				`${process.env.REACT_APP_SERVICE_KEY}`,
+				`${process.env.REACT_APP_TEMPLATE_KEY}`,
+				templateParams,
+				`${process.env.REACT_APP_USER_KEY}`
+			);
             setContactState({...contactState, open:true});
             resetForm();
         }

@@ -1,6 +1,6 @@
 {
   "name": "malcolm_portfolio_website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://malcolmbaatjies.me/",
   "dependencies": {
@@ -47,6 +47,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.2.3"
   }
 }
